@@ -1,11 +1,14 @@
-# Noonvaei (نانوایی سنگک) — Godot
+# Cafe Irani (کافه ایرانی) — Godot
 
-Persian idle/tycoon mobile game: run a sangak bakery, upgrade 4 sections, earn more.
+Persian idle/tycoon mobile game: run an Irani cafe, upgrade its sections, earn more.
+Genre: idle tycoon. Camera: orthographic, isometric.
 Android-first, portrait. Migrated from Expo/React Native; the migration is DONE.
 The old repo `Noonvaei` is reference only.
+The project started as a sangak bakery (Noonvaei) and was re-themed to Cafe Irani, so some identifiers and files still use "bakery" naming (e.g. `bakery.gd`, `user://bakery_save.json`). Don't rename them unless the task asks for it.
 
 ## Stack
 - Godot 4.7, GDScript, GL Compatibility renderer.
+- Camera: orthographic, isometric projection. Keep it orthographic; never switch to perspective for the main world.
 - Viewport 1080x1920 portrait, stretch `canvas_items`, aspect `expand`.
 - Persian UI (RTL): Labels use `language = "fa"`. Helpers: `UiKit`, `FaFormat`. Fonts in `assets/fonts/`.
 
@@ -13,7 +16,7 @@ The old repo `Noonvaei` is reference only.
 - `scenes/main.tscn` -> `scripts/main.gd` builds the whole UI in code.
 - `scripts/game/` game logic: `economy.gd` (pure static funcs), `storage.gd`, `game_state.gd` (autoload `Game`).
 - `scripts/config/` balance numbers and strings.
-- `scripts/world/` map, camera, bakery, sidewalk, baker, cars, shop lighting, `world_config.gd` (all tunables).
+- `scripts/world/` map, camera, bakery (main building), sidewalk, baker, cars, shop lighting, `world_config.gd` (all tunables).
 - `scripts/scene/` iso projection + asset paths.
 - `scripts/ui/` HUD, bottom bar, upgrade panel, offline card, shared widgets.
 - `scripts/preview/` + `scenes/front_preview.tscn`, `compare_front.tscn`: dev-only 3D shop preview tools. Not part of the game.
@@ -30,6 +33,7 @@ The old repo `Noonvaei` is reference only.
 ## Conventions
 - snake_case files, one `class_name` per file, typed GDScript, `##` doc comments.
 - Code, comments and commit messages in English. Reply to the user in Persian.
+- Player-facing text uses the name "کافه ایرانی" / "Cafe Irani", not "نانوایی" / "Noonvaei".
 
 ## Working rules (save tokens)
 - Never read a whole big file. Find the relevant function first, then edit only that part.
