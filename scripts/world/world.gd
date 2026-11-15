@@ -24,6 +24,10 @@ extends Node3D
 ## Grid cell size (m) used to split a group so culling still works. 0 = one MultiMesh per group.
 @export var batch_chunk_size := 40.0
 
+@export_group("Debug")
+## TEMP: hides the whole cafe to measure draw calls without it. Set to false (or remove) when done.
+@export var debug_hide_cafe := true
+
 @onready var _city: Node3D = $City
 
 
@@ -38,3 +42,8 @@ func _ready() -> void:
 		var stats := InstanceBatcher.batch(_city, batch_exclude_prefixes,
 				batch_min_instances, batch_chunk_size)
 		print("CafeWorld: batched %d nodes into %d MultiMeshes" % [stats.removed, stats.batches])
+	if debug_hide_cafe:
+		var cafe := _city.get_node_or_null("Cafe") as Node3D
+		if cafe != null:
+			cafe.visible = false
+			print("CafeWorld: DEBUG cafe hidden")
