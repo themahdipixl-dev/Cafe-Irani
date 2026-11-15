@@ -21,7 +21,7 @@ environment = SubResource("Environment_world")
 [node name="Sun" type="DirectionalLight3D" parent="."]
 rotation_degrees = Vector3(-50, 25, 0)
 light_energy = 0.45
-shadow_enabled = true
+shadow_enabled = false
 directional_shadow_mode = 0
 directional_shadow_max_distance = 110.0
 

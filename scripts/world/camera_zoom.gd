@@ -1,21 +1,27 @@
 class_name CameraZoom
 extends Camera3D
-## Zoom for the orthographic camera: mouse wheel (desktop) and two-finger pinch (touch).
+## Zoom + pan for the orthographic camera.
 ##
-## Zooming only changes `size`; the camera position and angle stay fixed.
+## Zoom: mouse wheel (desktop) or two-finger pinch (touch). Changes `size` only.
 ## Smaller size = zoomed in, bigger size = zoomed out.
-## Uses `_input` (not `_unhandled_input`) so UI controls can't swallow the touches.
+## Pan: one-finger drag (touch) or left/middle mouse drag (desktop). Moves the camera
+## along the ground, keeping its angle and height.
+## Pinch uses `_input` so UI controls can't swallow it; pan uses `_unhandled_input`
+## so dragging on a UI panel doesn't move the world.
 
-## Closest zoom (smallest orthographic size, in meters).
-@export var min_size: float = 16.0
-## Farthest zoom (biggest orthographic size, in meters).
-@export var max_size: float = 60.0
+## Closest zoom (smallest orthographic size, in meters). Must stay above 0.
+## Practically unlimited for now (testing).
+@export var min_size: float = 0.5
+## Farthest zoom (biggest orthographic size, in meters). Practically unlimited for now.
+@export var max_size: float = 1000.0
 ## Mouse wheel: size change per notch (0.1 = 10 %).
 @export var wheel_step: float = 0.1
 ## Pinch strength: 1.0 = size follows the finger distance exactly.
 @export var pinch_sensitivity: float = 1.0
 ## How fast the camera catches up with the target zoom (higher = snappier).
 @export var smoothing: float = 12.0
+## Pan strength: 1.0 = the world follows the finger exactly.
+@export var pan_speed: float = 1.0
 
 var _target_size: float = 36.0
 var _touches: Dictionary = {}  # finger index -> Vector2 position
@@ -55,6 +61,20 @@ func _input(event: InputEvent) -> void:
 		_last_pinch_distance = distance
 
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventScreenDrag:
+		# Exactly one finger down = pan (two fingers = pinch zoom).
+		if _touches.size() == 1:
+			_pan_by(event.relative)
+	elif event is InputEventMouseMotion:
+		# Skip the mouse events Godot emulates from touches (they'd pan twice).
+		if not _touches.is_empty():
+			return
+		var held: int = event.button_mask
+		if held & (MOUSE_BUTTON_MASK_LEFT | MOUSE_BUTTON_MASK_MIDDLE):
+			_pan_by(event.relative)
+
+
 ## Distance between the two fingers, or 0 when there are not exactly two.
 func _pinch_distance() -> float:
 	if _touches.size() != 2:
@@ -65,3 +85,17 @@ func _pinch_distance() -> float:
 
 func _zoom_by(factor: float) -> void:
 	_target_size = clampf(_target_size * factor, min_size, max_size)
+
+
+## Moves the camera along the ground so the world follows the finger.
+## `pixels` is the drag distance on screen.
+func _pan_by(pixels: Vector2) -> void:
+	var units_per_pixel := size / get_viewport().get_visible_rect().size.x
+	var basis_now := global_transform.basis
+	var right := Vector3(basis_now.x.x, 0.0, basis_now.x.z).normalized()
+	var forward := -basis_now.z
+	var ahead := Vector3(forward.x, 0.0, forward.z).normalized()
+	# Screen-up covers more ground than its view-plane length (camera looks down at an angle).
+	var sin_elevation := maxf(-forward.y, 0.1)
+	var move := -pixels.x * right + (pixels.y / sin_elevation) * ahead
+	global_position += move * units_per_pixel * pan_speed
