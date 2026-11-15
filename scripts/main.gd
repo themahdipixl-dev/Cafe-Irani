@@ -1,16 +1,11 @@
 extends Control
-## PART 3 main scene: the world map with the real UI on top. Port of App.js
+## Main scene: UI layers on top of the (future) glb-based 3D world.
 ##
-## Layers (bottom -> top):  WorldMap  ->  TopGradient  ->  Hud  ->  UpgradePanel / ComingSoon  ->  BottomBar  ->  OfflineCard
+## The world (cafe, city, cars) will be built from .glb models placed in .tscn scenes.
+## Until then this scene only shows the UI.
 ##
-## React concept                      ->  Godot
-##   useGame()                         ->  `Game` autoload + its `changed` / `offline_report_changed` signals
-##   useState('home')                  ->  `_tab`
-##   useSafeAreaInsets / useBottomBarHeight -> UiKit.safe_insets() / BottomBar.bar_height()
-##   hideSystemNav (expo-navigation-bar) -> _hide_system_bars()
-##   loading screen (fonts / save)     ->  not needed: the save is loaded synchronously by `Game`, fonts are local files
+## Layers (bottom -> top):  TopGradient  ->  Hud  ->  UpgradePanel / ComingSoon  ->  BottomBar  ->  OfflineCard
 
-var _map: WorldMap
 var _top_gradient: TopGradient
 var _hud: Hud
 var _upgrade_panel: UpgradePanel
@@ -30,16 +25,11 @@ func _ready() -> void:
 
 	_hide_system_bars()
 
-	# --- world (bottom layer) ---
-	_map = WorldMap.new()
-	_map.name = "WorldMap"
-	add_child(_map)
-
 	# Phone's top status bar is hidden; a short black -> transparent gradient replaces it.
 	_top_gradient = TopGradient.new()
 	add_child(_top_gradient)
 
-	# The HUD root ignores the mouse, so empty areas still pass touches to the map.
+	# The HUD root ignores the mouse, so empty areas still pass touches to the world.
 	_hud = Hud.new()
 	add_child(_hud)
 
@@ -83,7 +73,6 @@ func _layout() -> void:
 	_hud.configure(width, _dp, inset_top)
 	_bottom_bar.configure(width, _dp, inset_bottom)
 
-	# JS: panelBottom = barHeight + 10
 	var panel_bottom := BottomBar.bar_height(inset_bottom, _dp) + 10.0 * _dp
 	_upgrade_panel.configure(_dp, panel_bottom)
 	_coming_soon.configure(_dp, panel_bottom)
@@ -108,7 +97,6 @@ func _apply_tab() -> void:
 
 ## Pushes the game state into the UI (runs on every `Game.changed`).
 func _refresh() -> void:
-	_map.set_level(Game.level)
 	_hud.set_state(Game.money, Game.income, Game.level)
 	if not Game.info.is_empty():
 		_upgrade_panel.refresh(Game.levels, Game.costs, Game.money, String(Game.info["bottleneck"]))
