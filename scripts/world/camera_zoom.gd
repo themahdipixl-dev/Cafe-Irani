@@ -4,6 +4,7 @@ extends Camera3D
 ##
 ## Zooming only changes `size`; the camera position and angle stay fixed.
 ## Smaller size = zoomed in, bigger size = zoomed out.
+## Uses `_input` (not `_unhandled_input`) so UI controls can't swallow the touches.
 
 ## Closest zoom (smallest orthographic size, in meters).
 @export var min_size: float = 16.0
@@ -31,7 +32,7 @@ func _process(delta: float) -> void:
 	size = lerpf(size, _target_size, 1.0 - exp(-smoothing * delta))
 
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			_zoom_by(1.0 - wheel_step)

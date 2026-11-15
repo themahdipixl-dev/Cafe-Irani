@@ -19,7 +19,7 @@ script = ExtResource("1_world")
 environment = SubResource("Environment_world")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-rotation_degrees = Vector3(-50, 114.5, 0)
+rotation_degrees = Vector3(-50, 25, 0)
 light_energy = 0.45
 shadow_enabled = true
 directional_shadow_mode = 0
