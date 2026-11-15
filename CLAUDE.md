@@ -4,10 +4,10 @@ Persian idle/tycoon mobile game: run an Irani cafe, upgrade it, earn more.
 Genre: idle tycoon. Camera: orthographic, isometric.
 Android-first, portrait. The project is built from scratch.
 
-## Workflow: glb-first (IMPORTANT)
-- All visuals (cafe, city, cars, props) are **.glb models made by the owner** in `assets/`. Never build visuals in code (no procedural meshes, no `_draw()` worlds, no code-made buildings/cars).
-- Claude's job in the world: write `.tscn` scenes and small scripts that decide **where** each glb object is, **what it does**, and **what happens to it** (placement, movement paths, animation triggers, interactions, upgrades visibility).
-- Instance glb files in `.tscn` (`[ext_resource type="PackedScene"]`). Don't rewrite or re-export glb files.
+## Workflow: glb-first
+- The 3D models (cafe, city, cars, props) are **.glb files made by the owner** and live in `assets/`. Use them as they are; don't build those visuals in code (no procedural meshes, no `_draw()` worlds, no code-made buildings/cars).
+- Claude owns everything else in the project: scenes (`.tscn`), scripts, game logic, economy, UI, camera, animations, placement/movement/behavior of every object, save system, export setup, docs. Build and change whatever the task needs.
+- Instance glb files in `.tscn` (`[ext_resource type="PackedScene"]`). Don't rewrite or re-export the glb files themselves.
 - Keep tunables (positions, speeds, camera values) in exported vars or a small config script, not buried in logic.
 - Don't invent asset paths: check `assets/` first, and ask the owner if a model is missing.
 
