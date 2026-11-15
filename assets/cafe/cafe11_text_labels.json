@@ -1,0 +1,5093 @@
+{
+ "meta": {
+  "source": "tehran_with_cafe_v5.glb (+ cafe11_no_text.glb for the first 110 items)",
+  "count": 111,
+  "note": "text was read visually from the mesh outlines (not stored in the GLB): verify wording and digits.",
+  "units": "meters, Godot/glTF axes (Y up)",
+  "label3d_convention": "label3d.position = center of the front face (+0.5 mm); basis_columns = [right, up, normal] in world space = Label3D basis (x,y,z); rotation_degrees_yxz = same rotation as Godot Euler (YXZ). Add Label3Ds under a Node3D with identity transform placed at the imported scene root.",
+  "size_m": "width/height/depth of the original text mesh (glyph extents), use width to fit Label3D.pixel_size",
+  "kept_in_glb": "all false: no text mesh is left in the GLB (Neon_Sub removed in tehran_with_cafe_v5_optimized_notext.glb)",
+  "warning": "Neon_Sub x was re-measured from v5 and is 0.042 m different from the old value; the other 110 items were not re-checked against v5."
+ },
+ "items": [
+  {
+   "node": "Banner_Scan",
+   "parent": null,
+   "mesh": "Text.063",
+   "kept_in_glb": false,
+   "text": "اسکن کن",
+   "size_m": {
+    "width": 0.1792,
+    "height": 0.0473,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -6.3705,
+     0.437,
+     5.5009
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Banner_Tag",
+   "parent": null,
+   "mesh": "Text.062",
+   "kept_in_glb": false,
+   "text": "بنوش و بازی کن",
+   "size_m": {
+    "width": 0.3794,
+    "height": 0.0568,
+    "depth": 0.01
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -6.3695,
+     1.1165,
+     5.5006
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Banner_Text",
+   "parent": null,
+   "mesh": "Text.061",
+   "kept_in_glb": false,
+   "text": "کافه",
+   "size_m": {
+    "width": 0.3232,
+    "height": 0.1438,
+    "depth": 0.02
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -6.3645,
+     1.3109,
+     5.496
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Blade_Text_+y",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.076",
+   "kept_in_glb": false,
+   "text": "قهوه",
+   "size_m": {
+    "width": 0.2985,
+    "height": 0.1586,
+    "depth": 0.008
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     6.5013,
+     1.7292,
+     -6.8785
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Blade_Text_-y",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.076",
+   "kept_in_glb": false,
+   "text": "قهوه",
+   "size_m": {
+    "width": 0.2985,
+    "height": 0.1586,
+    "depth": 0.008
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     6.4987,
+     1.7292,
+     -6.8215
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Back1",
+   "parent": "DriveThru",
+   "mesh": "Text.089",
+   "kept_in_glb": false,
+   "text": "قهوه‌ی تازه",
+   "size_m": {
+    "width": 0.6234,
+    "height": 0.1419,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     7.9989,
+     1.4912,
+     -6.5015
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Back2",
+   "parent": "DriveThru",
+   "mesh": "Text.090",
+   "kept_in_glb": false,
+   "text": "بدون پیاده شدن",
+   "size_m": {
+    "width": 0.6255,
+    "height": 0.1018,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     7.999,
+     1.1905,
+     -6.5015
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Name0",
+   "parent": "DriveThru",
+   "mesh": "Text.080",
+   "kept_in_glb": false,
+   "text": "اسپرسو",
+   "size_m": {
+    "width": 0.2501,
+    "height": 0.0865,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     7.6306,
+     1.5119,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Name1",
+   "parent": "DriveThru",
+   "mesh": "Text.082",
+   "kept_in_glb": false,
+   "text": "لاته",
+   "size_m": {
+    "width": 0.1081,
+    "height": 0.0611,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     7.5596,
+     1.3546,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Name2",
+   "parent": "DriveThru",
+   "mesh": "Text.084",
+   "kept_in_glb": false,
+   "text": "قهوه ترک",
+   "size_m": {
+    "width": 0.3065,
+    "height": 0.0798,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     7.6571,
+     1.1747,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Name3",
+   "parent": "DriveThru",
+   "mesh": "Text.086",
+   "kept_in_glb": false,
+   "text": "چای",
+   "size_m": {
+    "width": 0.1335,
+    "height": 0.0861,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     7.5701,
+     1.0021,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Note",
+   "parent": "DriveThru",
+   "mesh": "Text.088",
+   "kept_in_glb": false,
+   "text": "قیمت‌ها به هزار تومان",
+   "size_m": {
+    "width": 0.4359,
+    "height": 0.0473,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     8.0004,
+     0.7971,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Price0",
+   "parent": "DriveThru",
+   "mesh": "Text.081",
+   "kept_in_glb": false,
+   "text": "۶۵",
+   "size_m": {
+    "width": 0.0748,
+    "height": 0.058,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     8.4605,
+     1.5233,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Price1",
+   "parent": "DriveThru",
+   "mesh": "Text.083",
+   "kept_in_glb": false,
+   "text": "۹۵",
+   "size_m": {
+    "width": 0.08,
+    "height": 0.0582,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     8.4575,
+     1.3532,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Price2",
+   "parent": "DriveThru",
+   "mesh": "Text.085",
+   "kept_in_glb": false,
+   "text": "۷۰",
+   "size_m": {
+    "width": 0.067,
+    "height": 0.0592,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     8.4648,
+     1.1836,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Price3",
+   "parent": "DriveThru",
+   "mesh": "Text.087",
+   "kept_in_glb": false,
+   "text": "۴۵",
+   "size_m": {
+    "width": 0.0783,
+    "height": 0.0578,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     8.4565,
+     1.0134,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Board_Title",
+   "parent": "DriveThru",
+   "mesh": "Text.079",
+   "kept_in_glb": false,
+   "text": "منوی درایو تو",
+   "size_m": {
+    "width": 0.5698,
+    "height": 0.1041,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     8.0011,
+     1.7335,
+     -6.5985
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "CardText",
+   "parent": "Table_0",
+   "mesh": "Text.016",
+   "kept_in_glb": false,
+   "text": "میز ۱",
+   "size_m": {
+    "width": 0.0522,
+    "height": 0.0274,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -0.7001,
+     0.7927,
+     -2.141
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "CardText.001",
+   "parent": "Table_1",
+   "mesh": "Text.017",
+   "kept_in_glb": false,
+   "text": "میز ۲",
+   "size_m": {
+    "width": 0.0584,
+    "height": 0.0274,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     1.5999,
+     0.7927,
+     -2.141
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "CardText.002",
+   "parent": "Table_2",
+   "mesh": "Text.018",
+   "kept_in_glb": false,
+   "text": "میز ۳",
+   "size_m": {
+    "width": 0.0613,
+    "height": 0.0275,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     3.8999,
+     0.7928,
+     -2.141
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "CardText.003",
+   "parent": "Table_3",
+   "mesh": "Text.019",
+   "kept_in_glb": false,
+   "text": "میز ۴",
+   "size_m": {
+    "width": 0.0586,
+    "height": 0.0273,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     2.3999,
+     0.7927,
+     1.259
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "CardText.004",
+   "parent": "Table_4",
+   "mesh": "Text.020",
+   "kept_in_glb": false,
+   "text": "میز ۵",
+   "size_m": {
+    "width": 0.0598,
+    "height": 0.0274,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     4.7001,
+     0.7927,
+     1.259
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_T1",
+   "parent": null,
+   "mesh": "Text.024",
+   "kept_in_glb": false,
+   "text": "قهوه‌ی خوب، روز خوب",
+   "size_m": {
+    "width": 1.0312,
+    "height": 0.1075,
+    "depth": 0.004
+   },
+   "material": "CfChalk",
+   "color_hex": "#f7f7f1",
+   "emission": null,
+   "label3d": {
+    "position": [
+     4.7191,
+     1.8126,
+     -4.7395
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_T2",
+   "parent": null,
+   "mesh": "Text.025",
+   "kept_in_glb": false,
+   "text": "اینجا هر فنجان یک داستان دارد",
+   "size_m": {
+    "width": 0.7534,
+    "height": 0.0587,
+    "depth": 0.004
+   },
+   "material": "CfChalk",
+   "color_hex": "#f7f7f1",
+   "emission": null,
+   "label3d": {
+    "position": [
+     4.7191,
+     1.6363,
+     -4.7395
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_T3",
+   "parent": null,
+   "mesh": "Text.026",
+   "kept_in_glb": false,
+   "text": "رمز وای‌فای: cafe1234",
+   "size_m": {
+    "width": 0.5266,
+    "height": 0.0587,
+    "depth": 0.004
+   },
+   "material": "CfChalk",
+   "color_hex": "#f7f7f1",
+   "emission": null,
+   "label3d": {
+    "position": [
+     4.7192,
+     1.4163,
+     -4.7395
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_Text_0",
+   "parent": "Entrance_Chalkboard",
+   "mesh": "Text.107",
+   "kept_in_glb": false,
+   "text": "خوش آمدید",
+   "size_m": {
+    "width": 0.4366,
+    "height": 0.102,
+    "depth": 0.004
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.5498,
+     0.7968,
+     6.9607
+    ],
+    "rotation_degrees_yxz": [
+     -12.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.97815,
+      -0.20791
+     ],
+     [
+      0.0,
+      0.20791,
+      0.97815
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_Text_1",
+   "parent": "Entrance_Chalkboard",
+   "mesh": "Text.108",
+   "kept_in_glb": false,
+   "text": "قهوه‌ی تازه‌دم",
+   "size_m": {
+    "width": 0.2666,
+    "height": 0.0576,
+    "depth": 0.004
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.5493,
+     0.6229,
+     6.9977
+    ],
+    "rotation_degrees_yxz": [
+     -12.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.97815,
+      -0.20791
+     ],
+     [
+      0.0,
+      0.20791,
+      0.97815
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_Text_2",
+   "parent": "Entrance_Chalkboard",
+   "mesh": "Text.109",
+   "kept_in_glb": false,
+   "text": "کیک و دسر خانگی",
+   "size_m": {
+    "width": 0.3182,
+    "height": 0.0474,
+    "depth": 0.004
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.5509,
+     0.532,
+     7.017
+    ],
+    "rotation_degrees_yxz": [
+     -12.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.97815,
+      -0.20791
+     ],
+     [
+      0.0,
+      0.20791,
+      0.97815
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Chalk_Text_3",
+   "parent": "Entrance_Chalkboard",
+   "mesh": "Text.110",
+   "kept_in_glb": false,
+   "text": "همه روزه ۸ تا ۲۲",
+   "size_m": {
+    "width": 0.268,
+    "height": 0.0396,
+    "depth": 0.004
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.5501,
+     0.3342,
+     7.059
+    ],
+    "rotation_degrees_yxz": [
+     -12.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.97815,
+      -0.20791
+     ],
+     [
+      0.0,
+      0.20791,
+      0.97815
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Counter_PlateText",
+   "parent": null,
+   "mesh": "Text.021",
+   "kept_in_glb": false,
+   "text": "سفارش اینجا",
+   "size_m": {
+    "width": 0.4599,
+    "height": 0.0851,
+    "depth": 0.008
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -3.1205,
+     0.7147,
+     0.999
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Display_Text",
+   "parent": "Roaster",
+   "mesh": "Text.034",
+   "kept_in_glb": false,
+   "text": "۲۰۵ درجه",
+   "size_m": {
+    "width": 0.1166,
+    "height": 0.031,
+    "depth": 0.004
+   },
+   "material": "RoastDisplayText",
+   "color_hex": "#ffd389",
+   "emission": {
+    "color": [
+     1,
+     0.55,
+     0.15
+    ],
+    "strength": 3
+   },
+   "label3d": {
+    "position": [
+     -11.4706,
+     0.4775,
+     0.9445
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "DoorMat_Text",
+   "parent": null,
+   "mesh": "Text.023",
+   "kept_in_glb": false,
+   "text": "خوش آمدید",
+   "size_m": {
+    "width": 0.6894,
+    "height": 0.1611,
+    "depth": 0.006
+   },
+   "material": "CfRugCream",
+   "color_hex": "#f3eace",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -0.0008,
+     0.0155,
+     4.3497
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     45.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.70711,
+      0.0,
+      -0.70711
+     ],
+     [
+      -0.70711,
+      0.0,
+      -0.70711
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Entry_Text",
+   "parent": "DriveThru",
+   "mesh": "Text.095",
+   "kept_in_glb": false,
+   "text": "ورود",
+   "size_m": {
+    "width": 0.1813,
+    "height": 0.0769,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     11.7085,
+     1.0801,
+     -7.0689
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Exit_Text",
+   "parent": "DriveThru",
+   "mesh": "Text.096",
+   "kept_in_glb": false,
+   "text": "خروج",
+   "size_m": {
+    "width": 0.2425,
+    "height": 0.1138,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     4.7982,
+     1.7236,
+     -9.4715
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Extinguisher_Sign_Text",
+   "parent": null,
+   "mesh": "Text.042",
+   "kept_in_glb": false,
+   "text": "آتش‌نشانی",
+   "size_m": {
+    "width": 0.169,
+    "height": 0.043,
+    "depth": 0.004
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7755,
+     1.5602,
+     3.4487
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Extinguisher_Sign_Text.001",
+   "parent": null,
+   "mesh": "Text.042",
+   "kept_in_glb": false,
+   "text": "آتش‌نشانی",
+   "size_m": {
+    "width": 0.169,
+    "height": 0.043,
+    "depth": 0.004
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7755,
+     1.5602,
+     -5.7013
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Fascia_Sub",
+   "parent": "Entrance",
+   "mesh": "Text.105",
+   "kept_in_glb": false,
+   "text": "قهوه و دسر",
+   "size_m": {
+    "width": 0.3353,
+    "height": 0.0701,
+    "depth": 0.008
+   },
+   "material": "CfFabricCream",
+   "color_hex": "#f1ebde",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -0.0026,
+     2.3352,
+     5.0485
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Fascia_Title",
+   "parent": "Entrance",
+   "mesh": "Text.104",
+   "kept_in_glb": false,
+   "text": "کافه",
+   "size_m": {
+    "width": 0.4202,
+    "height": 0.1869,
+    "depth": 0.008
+   },
+   "material": "CfTrim",
+   "color_hex": "#f9f8f5",
+   "emission": null,
+   "label3d": {
+    "position": [
+     0.0052,
+     2.5342,
+     5.0485
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Gas_Sign_Text",
+   "parent": null,
+   "mesh": "Text.035",
+   "kept_in_glb": false,
+   "text": "گاز",
+   "size_m": {
+    "width": 0.0829,
+    "height": 0.0788,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.2006,
+     0.9997,
+     0.127
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Gate_Text_+x",
+   "parent": "DriveThru",
+   "mesh": "Text.093",
+   "kept_in_glb": false,
+   "text": "حداکثر ارتفاع ۲ متر",
+   "size_m": {
+    "width": 0.6236,
+    "height": 0.0942,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     11.6285,
+     1.7081,
+     -8.2772
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Gate_Text_-x",
+   "parent": "DriveThru",
+   "mesh": "Text.093",
+   "kept_in_glb": false,
+   "text": "حداکثر ارتفاع ۲ متر",
+   "size_m": {
+    "width": 0.6236,
+    "height": 0.0942,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     11.5715,
+     1.7081,
+     -8.2828
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     -90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Glass_Text",
+   "parent": null,
+   "mesh": "Text.029",
+   "kept_in_glb": false,
+   "text": "قهوه · کیک · دسر",
+   "size_m": {
+    "width": 0.8232,
+    "height": 0.1127,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -2.0042,
+     1.6425,
+     4.9295
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Jar_0_LabelText",
+   "parent": null,
+   "mesh": "Text.036",
+   "kept_in_glb": false,
+   "text": "سبز",
+   "size_m": {
+    "width": 0.03,
+    "height": 0.0157,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -8.5508,
+     1.3997,
+     0.28
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Jar_1_LabelText",
+   "parent": null,
+   "mesh": "Text.037",
+   "kept_in_glb": false,
+   "text": "روشن",
+   "size_m": {
+    "width": 0.0446,
+    "height": 0.0175,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -8.2804,
+     1.4006,
+     0.28
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Jar_2_LabelText",
+   "parent": null,
+   "mesh": "Text.038",
+   "kept_in_glb": false,
+   "text": "متوسط",
+   "size_m": {
+    "width": 0.0581,
+    "height": 0.0189,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -8.0104,
+     1.4013,
+     0.28
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Jar_3_LabelText",
+   "parent": null,
+   "mesh": "Text.039",
+   "kept_in_glb": false,
+   "text": "تیره",
+   "size_m": {
+    "width": 0.0282,
+    "height": 0.0168,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -7.74,
+     1.4002,
+     0.28
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Jar_4_LabelText",
+   "parent": null,
+   "mesh": "Text.040",
+   "kept_in_glb": false,
+   "text": "اسپرسو",
+   "size_m": {
+    "width": 0.0588,
+    "height": 0.0204,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -7.4702,
+     1.4006,
+     0.28
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_0_0",
+   "parent": null,
+   "mesh": "Text.003",
+   "kept_in_glb": false,
+   "text": "اسپرسو · ۹۰",
+   "size_m": {
+    "width": 0.2823,
+    "height": 0.0631,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.7841,
+     -1.1989
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_0_1",
+   "parent": null,
+   "mesh": "Text.004",
+   "kept_in_glb": false,
+   "text": "کاپوچینو · ۱۱۵",
+   "size_m": {
+    "width": 0.3181,
+    "height": 0.0631,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.6791,
+     -1.2019
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_0_2",
+   "parent": null,
+   "mesh": "Text.005",
+   "kept_in_glb": false,
+   "text": "لاته · ۱۲۰",
+   "size_m": {
+    "width": 0.194,
+    "height": 0.0446,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.5834,
+     -1.1996
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_0_3",
+   "parent": null,
+   "mesh": "Text.006",
+   "kept_in_glb": false,
+   "text": "قهوه ترک · ۱۰۰",
+   "size_m": {
+    "width": 0.3268,
+    "height": 0.0582,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.4711,
+     -1.2002
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_0_4",
+   "parent": null,
+   "mesh": "Text.007",
+   "kept_in_glb": false,
+   "text": "چای ماسالا · ۸۵",
+   "size_m": {
+    "width": 0.3886,
+    "height": 0.0628,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.3643,
+     -1.1994
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_1_0",
+   "parent": null,
+   "mesh": "Text.010",
+   "kept_in_glb": false,
+   "text": "آیس لاته · ۱۳۵",
+   "size_m": {
+    "width": 0.3508,
+    "height": 0.0666,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.7903,
+     -2.5027
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_1_1",
+   "parent": null,
+   "mesh": "Text.011",
+   "kept_in_glb": false,
+   "text": "موکا · ۱۳۰",
+   "size_m": {
+    "width": 0.2209,
+    "height": 0.0585,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.6814,
+     -2.4997
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_1_2",
+   "parent": null,
+   "mesh": "Text.012",
+   "kept_in_glb": false,
+   "text": "شیک شکلات · ۱۶۰",
+   "size_m": {
+    "width": 0.4346,
+    "height": 0.0563,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.5775,
+     -2.5
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_1_3",
+   "parent": null,
+   "mesh": "Text.013",
+   "kept_in_glb": false,
+   "text": "کیک هویج · ۱۱۰",
+   "size_m": {
+    "width": 0.351,
+    "height": 0.0683,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.4661,
+     -2.5019
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Item_1_4",
+   "parent": null,
+   "mesh": "Text.014",
+   "kept_in_glb": false,
+   "text": "تیرامیسو · ۱۵۰",
+   "size_m": {
+    "width": 0.3335,
+    "height": 0.0587,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.3663,
+     -2.5006
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Name0",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.065",
+   "kept_in_glb": false,
+   "text": "اسپرسو",
+   "size_m": {
+    "width": 0.1912,
+    "height": 0.0662,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.1495,
+     1.6338,
+     -5.9502
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Name1",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.067",
+   "kept_in_glb": false,
+   "text": "لاته",
+   "size_m": {
+    "width": 0.0827,
+    "height": 0.0467,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.1495,
+     1.5235,
+     -6.0044
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Name2",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.069",
+   "kept_in_glb": false,
+   "text": "چای",
+   "size_m": {
+    "width": 0.1021,
+    "height": 0.0658,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.1495,
+     1.394,
+     -5.9964
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Name3",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.071",
+   "kept_in_glb": false,
+   "text": "کیک روز",
+   "size_m": {
+    "width": 0.2115,
+    "height": 0.0609,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.1495,
+     1.276,
+     -5.9449
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Note_0",
+   "parent": null,
+   "mesh": "Text.008",
+   "kept_in_glb": false,
+   "text": "قیمت‌ها به هزار تومان",
+   "size_m": {
+    "width": 0.3312,
+    "height": 0.0359,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7475,
+     1.2578,
+     -1.1997
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Note_1",
+   "parent": null,
+   "mesh": "Text.008",
+   "kept_in_glb": false,
+   "text": "قیمت‌ها به هزار تومان",
+   "size_m": {
+    "width": 0.3312,
+    "height": 0.0359,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7475,
+     1.2578,
+     -2.4997
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Price0",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.066",
+   "kept_in_glb": false,
+   "text": "۶۵",
+   "size_m": {
+    "width": 0.0572,
+    "height": 0.0443,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     2.1495,
+     1.6425,
+     -5.2802
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Price1",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.068",
+   "kept_in_glb": false,
+   "text": "۹۵",
+   "size_m": {
+    "width": 0.0612,
+    "height": 0.0445,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     2.1495,
+     1.5224,
+     -5.2825
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Price2",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.070",
+   "kept_in_glb": false,
+   "text": "۴۵",
+   "size_m": {
+    "width": 0.0599,
+    "height": 0.0442,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     2.1495,
+     1.4026,
+     -5.2832
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Price3",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.072",
+   "kept_in_glb": false,
+   "text": "۸۵",
+   "size_m": {
+    "width": 0.0673,
+    "height": 0.0448,
+    "depth": 0.008
+   },
+   "material": "PaintYellow",
+   "color_hex": "#fadf59",
+   "emission": null,
+   "label3d": {
+    "position": [
+     2.1495,
+     1.2823,
+     -5.285
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Title",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.064",
+   "kept_in_glb": false,
+   "text": "منوی امروز",
+   "size_m": {
+    "width": 0.3884,
+    "height": 0.0851,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     2.1495,
+     1.8247,
+     -5.6462
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Title_0",
+   "parent": null,
+   "mesh": "Text.002",
+   "kept_in_glb": false,
+   "text": "نوشیدنی‌های گرم",
+   "size_m": {
+    "width": 0.5904,
+    "height": 0.1093,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.9623,
+     -1.1987
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Menu_Title_1",
+   "parent": null,
+   "mesh": "Text.009",
+   "kept_in_glb": false,
+   "text": "سرد و دسر",
+   "size_m": {
+    "width": 0.3863,
+    "height": 0.0631,
+    "depth": 0.006
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -5.7465,
+     1.9537,
+     -2.4966
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Mood_Title",
+   "parent": null,
+   "mesh": "Text.052",
+   "kept_in_glb": false,
+   "text": "ایده‌ها",
+   "size_m": {
+    "width": 0.1541,
+    "height": 0.0636,
+    "depth": 0.006
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7365,
+     1.8172,
+     5.9998
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Neon_Sub",
+   "parent": "Cafe_Root",
+   "mesh": "Text.001",
+   "kept_in_glb": false,
+   "text": "قهوه · کیک · آرامش",
+   "size_m": {
+    "width": 0.6615,
+    "height": 0.0913,
+    "depth": 0.03
+   },
+   "material": "Neon",
+   "color_hex": "#ffedda",
+   "emission": {
+    "color": [
+     1,
+     0.7,
+     0.45
+    ],
+    "strength": 2
+   },
+   "label3d": {
+    "position": [
+     -5.7025,
+     1.5005,
+     1.2006
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ],
+    "position_old_from_cafe11": [
+     -5.7445,
+     1.5004,
+     1.2006
+    ]
+   },
+   "glb_node_path": "Cafe_Root/Neon_Sub"
+  },
+  {
+   "node": "Neon_Text",
+   "parent": null,
+   "mesh": "Text",
+   "kept_in_glb": false,
+   "text": "کافه",
+   "size_m": {
+    "width": 0.4848,
+    "height": 0.2157,
+    "depth": 0.04
+   },
+   "material": "Neon",
+   "color_hex": "#ffedda",
+   "emission": {
+    "color": [
+     1,
+     0.7,
+     0.45
+    ],
+    "strength": 2
+   },
+   "label3d": {
+    "position": [
+     -5.7395,
+     1.7963,
+     1.194
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Note_Text_0",
+   "parent": null,
+   "mesh": "Text.054",
+   "kept_in_glb": false,
+   "text": "پوستر",
+   "size_m": {
+    "width": 0.0916,
+    "height": 0.0316,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.7017,
+     1.5716,
+     5.0505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Note_Text_1",
+   "parent": null,
+   "mesh": "Text.055",
+   "kept_in_glb": false,
+   "text": "اینستا",
+   "size_m": {
+    "width": 0.0903,
+    "height": 0.0363,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.3999,
+     1.5784,
+     5.0505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Note_Text_2",
+   "parent": null,
+   "mesh": "Text.056",
+   "kept_in_glb": false,
+   "text": "تخفیف",
+   "size_m": {
+    "width": 0.1136,
+    "height": 0.0324,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.1,
+     1.5765,
+     5.0505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Note_Text_3",
+   "parent": null,
+   "mesh": "Text.057",
+   "kept_in_glb": false,
+   "text": "رویداد",
+   "size_m": {
+    "width": 0.0904,
+    "height": 0.0378,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.5506,
+     1.2977,
+     5.0505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Note_Text_4",
+   "parent": null,
+   "mesh": "Text.058",
+   "kept_in_glb": false,
+   "text": "بنر",
+   "size_m": {
+    "width": 0.0393,
+    "height": 0.0287,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.2515,
+     1.2931,
+     5.0505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Open_Hours",
+   "parent": null,
+   "mesh": "Text.028",
+   "kept_in_glb": false,
+   "text": "ساعت کار: ۸ تا ۲۳",
+   "size_m": {
+    "width": 0.5405,
+    "height": 0.0708,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     2.0,
+     1.5957,
+     4.9445
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Open_Text",
+   "parent": null,
+   "mesh": "Text.027",
+   "kept_in_glb": false,
+   "text": "باز است",
+   "size_m": {
+    "width": 0.648,
+    "height": 0.1888,
+    "depth": 0.02
+   },
+   "material": "CfNeonRed",
+   "color_hex": "#ff9589",
+   "emission": {
+    "color": [
+     1,
+     0.15,
+     0.1
+    ],
+    "strength": 1.5
+   },
+   "label3d": {
+    "position": [
+     1.998,
+     1.7484,
+     4.9505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Open_Text.001",
+   "parent": "Entrance",
+   "mesh": "Text.106",
+   "kept_in_glb": false,
+   "text": "باز است",
+   "size_m": {
+    "width": 0.2268,
+    "height": 0.0661,
+    "depth": 0.008
+   },
+   "material": "CfTrim",
+   "color_hex": "#f9f8f5",
+   "emission": null,
+   "label3d": {
+    "position": [
+     0.6193,
+     1.4959,
+     4.9485
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "PkSign_P",
+   "parent": "Parking",
+   "mesh": "Text.101",
+   "kept_in_glb": false,
+   "text": "P",
+   "size_m": {
+    "width": 0.2666,
+    "height": 0.4228,
+    "depth": 0.008
+   },
+   "material": "White",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     6.8995,
+     2.1754,
+     6.6314
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "PkSign_T1",
+   "parent": "Parking",
+   "mesh": "Text.102",
+   "kept_in_glb": false,
+   "text": "پارکینگ",
+   "size_m": {
+    "width": 0.3861,
+    "height": 0.1463,
+    "depth": 0.008
+   },
+   "material": "White",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     6.8995,
+     1.4946,
+     6.652
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "PkSign_T2",
+   "parent": "Parking",
+   "mesh": "Text.103",
+   "kept_in_glb": false,
+   "text": "ویژه مشتریان",
+   "size_m": {
+    "width": 0.3869,
+    "height": 0.071,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     6.8995,
+     1.3656,
+     6.6509
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Pk_Stall_1",
+   "parent": "Parking",
+   "mesh": "Text.098",
+   "kept_in_glb": false,
+   "text": "۱",
+   "size_m": {
+    "width": 0.051,
+    "height": 0.2055,
+    "depth": 0.0
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     10.3685,
+     0.0215,
+     8.7512
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Pk_Stall_2",
+   "parent": "Parking",
+   "mesh": "Text.099",
+   "kept_in_glb": false,
+   "text": "۲",
+   "size_m": {
+    "width": 0.1218,
+    "height": 0.2055,
+    "depth": 0.0
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     10.3685,
+     0.0215,
+     6.6469
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Pk_Stall_3",
+   "parent": "Parking",
+   "mesh": "Text.100",
+   "kept_in_glb": false,
+   "text": "۳",
+   "size_m": {
+    "width": 0.1506,
+    "height": 0.2061,
+    "depth": 0.0
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     10.3682,
+     0.0215,
+     4.5469
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Pk_Text_Enter",
+   "parent": "Parking",
+   "mesh": "Text.097",
+   "kept_in_glb": false,
+   "text": "ورود",
+   "size_m": {
+    "width": 0.3296,
+    "height": 0.2097,
+    "depth": 0.0
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     11.3542,
+     0.0215,
+     9.452
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Plaque_Text",
+   "parent": null,
+   "mesh": "Text.041",
+   "kept_in_glb": false,
+   "text": "قهوه تازه برشته",
+   "size_m": {
+    "width": 0.5085,
+    "height": 0.0804,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -7.5506,
+     1.975,
+     0.128
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Poster_0_Text",
+   "parent": null,
+   "mesh": "Text.049",
+   "kept_in_glb": false,
+   "text": "تخفیف\nویژه",
+   "size_m": {
+    "width": 0.284,
+    "height": 0.1849,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7405,
+     1.7692,
+     9.2001
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Poster_1_Text",
+   "parent": null,
+   "mesh": "Text.050",
+   "kept_in_glb": false,
+   "text": "کافه\nبازی",
+   "size_m": {
+    "width": 0.1642,
+    "height": 0.1946,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7405,
+     1.7741,
+     8.2993
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Poster_2_Text",
+   "parent": null,
+   "mesh": "Text.051",
+   "kept_in_glb": false,
+   "text": "رویداد\nهفته",
+   "size_m": {
+    "width": 0.2259,
+    "height": 0.1722,
+    "depth": 0.008
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7405,
+     1.7853,
+     7.4016
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "RB_Crack",
+   "parent": null,
+   "mesh": "Text.044",
+   "kept_in_glb": false,
+   "text": "ترک اول",
+   "size_m": {
+    "width": 0.1045,
+    "height": 0.0312,
+    "depth": 0.004
+   },
+   "material": "RoastChalkHi",
+   "color_hex": "#face90",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7585,
+     1.7411,
+     4.1584
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "RB_Temp",
+   "parent": null,
+   "mesh": "Text.046",
+   "kept_in_glb": false,
+   "text": "دما",
+   "size_m": {
+    "width": 0.0353,
+    "height": 0.0216,
+    "depth": 0.004
+   },
+   "material": "RoastChalk",
+   "color_hex": "#f8f7ef",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7585,
+     1.7716,
+     4.5196
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "RB_Time",
+   "parent": null,
+   "mesh": "Text.045",
+   "kept_in_glb": false,
+   "text": "زمان",
+   "size_m": {
+    "width": 0.0532,
+    "height": 0.0283,
+    "depth": 0.004
+   },
+   "material": "RoastChalk",
+   "color_hex": "#f8f7ef",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7585,
+     1.3483,
+     4.2005
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "RB_Title",
+   "parent": null,
+   "mesh": "Text.043",
+   "kept_in_glb": false,
+   "text": "منحنی برشته",
+   "size_m": {
+    "width": 0.3048,
+    "height": 0.0526,
+    "depth": 0.004
+   },
+   "material": "RoastChalk",
+   "color_hex": "#f8f7ef",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7585,
+     1.8644,
+     4.2509
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Road_Text_Order",
+   "parent": "DriveThru",
+   "mesh": "Text.077",
+   "kept_in_glb": false,
+   "text": "سفارش",
+   "size_m": {
+    "width": 1.0424,
+    "height": 0.7076,
+    "depth": 0.0
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     10.9941,
+     0.0215,
+     -8.0966
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Road_Text_Pickup",
+   "parent": "DriveThru",
+   "mesh": "Text.078",
+   "kept_in_glb": false,
+   "text": "تحویل",
+   "size_m": {
+    "width": 0.8075,
+    "height": 0.7076,
+    "depth": 0.0
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     4.8441,
+     0.0215,
+     -8.0997
+    ],
+    "rotation_degrees_yxz": [
+     -90.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "ST_Exit_Text",
+   "parent": null,
+   "mesh": "Text.033",
+   "kept_in_glb": false,
+   "text": "خروج",
+   "size_m": {
+    "width": 0.1112,
+    "height": 0.0521,
+    "depth": 0.004
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7525,
+     2.0479,
+     -2.3992
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Sack_2_TagText",
+   "parent": "BeanPallet",
+   "mesh": "Text.030",
+   "kept_in_glb": false,
+   "text": "اتیوپی",
+   "size_m": {
+    "width": 0.0697,
+    "height": 0.0305,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.781,
+     0.3672,
+     -0.5395
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Sack_2_TagText.001",
+   "parent": "BeanPallet.001",
+   "mesh": "Text.030",
+   "kept_in_glb": false,
+   "text": "اتیوپی",
+   "size_m": {
+    "width": 0.0697,
+    "height": 0.0305,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.831,
+     0.3672,
+     4.4105
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Sack_3_TagText",
+   "parent": "BeanPallet",
+   "mesh": "Text.031",
+   "kept_in_glb": false,
+   "text": "برزیل",
+   "size_m": {
+    "width": 0.0594,
+    "height": 0.0284,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.781,
+     0.3682,
+     -0.9597
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Sack_3_TagText.001",
+   "parent": "BeanPallet.001",
+   "mesh": "Text.031",
+   "kept_in_glb": false,
+   "text": "برزیل",
+   "size_m": {
+    "width": 0.0594,
+    "height": 0.0284,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.831,
+     0.3682,
+     3.9903
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Shelf_Plaque_Text",
+   "parent": null,
+   "mesh": "Text.060",
+   "kept_in_glb": false,
+   "text": "محصولات ما",
+   "size_m": {
+    "width": 0.4096,
+    "height": 0.0755,
+    "depth": 0.008
+   },
+   "material": "Paper",
+   "color_hex": "#fdfdfa",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -8.3995,
+     1.6254,
+     5.3365
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Speaker_Text_+y",
+   "parent": "DriveThru",
+   "mesh": "Text.091",
+   "kept_in_glb": false,
+   "text": "سفارش دهید",
+   "size_m": {
+    "width": 0.3177,
+    "height": 0.0568,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     9.0004,
+     1.5965,
+     -6.9715
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Speaker_Text_-y",
+   "parent": "DriveThru",
+   "mesh": "Text.091",
+   "kept_in_glb": false,
+   "text": "سفارش دهید",
+   "size_m": {
+    "width": 0.3177,
+    "height": 0.0568,
+    "depth": 0.008
+   },
+   "material": "Chalk",
+   "color_hex": "#f7f7f1",
+   "emission": {
+    "color": [
+     0.325,
+     0.325,
+     0.308
+    ],
+    "strength": 1
+   },
+   "label3d": {
+    "position": [
+     8.9995,
+     1.5965,
+     -6.9285
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "StockTitle",
+   "parent": "Storage_StockBoard",
+   "mesh": "Text.032",
+   "kept_in_glb": false,
+   "text": "STOCK",
+   "size_m": {
+    "width": 0.2887,
+    "height": 0.063,
+    "depth": 0.02
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -11.7425,
+     1.6637,
+     -3.7018
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "TipText",
+   "parent": "TipJar",
+   "mesh": "Text.022",
+   "kept_in_glb": false,
+   "text": "انعام",
+   "size_m": {
+    "width": 0.0447,
+    "height": 0.0288,
+    "depth": 0.002
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -3.602,
+     1.1564,
+     -3.2494
+    ],
+    "rotation_degrees_yxz": [
+     -0.0,
+     90.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      0.0,
+      0.0,
+      -1.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      1.0,
+      0.0,
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "WB_Label",
+   "parent": null,
+   "mesh": "Text.059",
+   "kept_in_glb": false,
+   "text": "فروش",
+   "size_m": {
+    "width": 0.1091,
+    "height": 0.0421,
+    "depth": 0.004
+   },
+   "material": "Text",
+   "color_hex": "#3f3f3f",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -9.3503,
+     1.6171,
+     5.0505
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "WB_Title",
+   "parent": null,
+   "mesh": "Text.053",
+   "kept_in_glb": false,
+   "text": "برنامه کمپین زمستان",
+   "size_m": {
+    "width": 0.6202,
+    "height": 0.0764,
+    "depth": 0.004
+   },
+   "material": "MktCap",
+   "color_hex": "#89c4cb",
+   "emission": null,
+   "label3d": {
+    "position": [
+     -10.0008,
+     1.8129,
+     5.0525
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      0.0,
+      -0.0,
+      1.0
+     ]
+    ]
+   }
+  },
+  {
+   "node": "Win_Sticker",
+   "parent": "DriveThru_Booth",
+   "mesh": "Text.074",
+   "kept_in_glb": false,
+   "text": "بفرمایید",
+   "size_m": {
+    "width": 0.3095,
+    "height": 0.0946,
+    "depth": 0.002
+   },
+   "material": "PaintWhite",
+   "color_hex": "#f9f9f9",
+   "emission": null,
+   "label3d": {
+    "position": [
+     4.0807,
+     1.6941,
+     -6.6635
+    ],
+    "rotation_degrees_yxz": [
+     0.0,
+     -180.0,
+     0.0
+    ],
+    "basis_columns": [
+     [
+      -1.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      1.0,
+      0.0
+     ],
+     [
+      -0.0,
+      -0.0,
+      -1.0
+     ]
+    ]
+   }
+  }
+ ]
+}

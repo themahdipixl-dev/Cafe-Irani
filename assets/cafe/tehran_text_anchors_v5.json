@@ -1,0 +1,1616 @@
+{
+ "notes": "positions are the center of each sign board face (0.22m in front of the board). *_gltf = Y-up (x, z, -y) as stored in the .glb; *_blender = Z-up. Text faces along normal; text is RTL Persian. No text exists as mesh in the GLB.",
+ "count": 46,
+ "signs": [
+  {
+   "id": "sign_000",
+   "building": "Bld_00_shop",
+   "face": "front",
+   "shop_type": "mobile",
+   "text_fa": "موبایل",
+   "text_translit": "Mobile",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 4.57,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -10.617,
+    3.395,
+    -22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    -10.617,
+    22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_000",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_001",
+   "building": "Bld_00_shop",
+   "face": "right",
+   "shop_type": "pharmacy",
+   "text_fa": "داروخانه شبانه‌روزی",
+   "text_translit": "Darukhane Shabaneruzi",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.19,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    -26.194
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    26.194,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_001",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_002",
+   "building": "Bld_00_shop",
+   "face": "right",
+   "shop_type": "salon",
+   "text_fa": "آرایشگاه",
+   "text_translit": "Arayeshgah",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.41,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    -32.694
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    32.694,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_002",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_003",
+   "building": "Bld_04_shop",
+   "face": "front",
+   "shop_type": "exchange",
+   "text_fa": "صرافی",
+   "text_translit": "Sarrafi",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.84,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    -39.518
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    39.518,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_003",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_004",
+   "building": "Bld_05_shop",
+   "face": "front",
+   "shop_type": "sandwich",
+   "text_fa": "ساندویچی",
+   "text_translit": "Sandwichi",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.76,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    -46.518
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    46.518,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_004",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_005",
+   "building": "Bld_08_shop",
+   "face": "front",
+   "shop_type": "bakery",
+   "text_fa": "نانوایی سنگکی",
+   "text_translit": "Nanvaei Sangak",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 5.44,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -10.181,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -10.181,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_005",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_006",
+   "building": "Bld_08_shop",
+   "face": "left",
+   "shop_type": "grocery",
+   "text_fa": "سوپرمارکت",
+   "text_translit": "Supermarket",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 5.73,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    33.036
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    -33.036,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_006",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_007",
+   "building": "Bld_08_shop",
+   "face": "left",
+   "shop_type": "pastry",
+   "text_fa": "قنادی",
+   "text_translit": "Ghannadi",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.87,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    26.536
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    -26.536,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_007",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_008",
+   "building": "Bld_12_shop",
+   "face": "front",
+   "shop_type": "clothes",
+   "text_fa": "پوشاک مردانه",
+   "text_translit": "Pushak Mardane",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.54,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -13.22,
+    3.395,
+    46.629
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    -13.22,
+    -46.629,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_008",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_009",
+   "building": "Bld_14_shop",
+   "face": "front",
+   "shop_type": "books",
+   "text_fa": "کتابفروشی",
+   "text_translit": "Ketab Foroshi",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 7.81,
+   "sign_height": 0.85,
+   "position_gltf": [
+    13.22,
+    3.395,
+    45.994
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    13.22,
+    -45.994,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_009",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_010",
+   "building": "Bld_15_shop",
+   "face": "front",
+   "shop_type": "greengrocer",
+   "text_fa": "میوه و سبزی تازه",
+   "text_translit": "Mive va Sabzi Taze",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 5.79,
+   "sign_height": 0.85,
+   "position_gltf": [
+    13.22,
+    3.395,
+    38.994
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    13.22,
+    -38.994,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_010",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_011",
+   "building": "Bld_16_shop",
+   "face": "front",
+   "shop_type": "optics",
+   "text_fa": "عینک‌سازی",
+   "text_translit": "Eynak Sazi",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 5.9,
+   "sign_height": 0.85,
+   "position_gltf": [
+    24.78,
+    3.395,
+    7.949
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    -7.949,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_011",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_012",
+   "building": "Bld_16_shop",
+   "face": "left",
+   "shop_type": "print",
+   "text_fa": "چاپ و تکثیر",
+   "text_translit": "Chap va Taksir",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 6.62,
+   "sign_height": 0.85,
+   "position_gltf": [
+    34.588,
+    3.395,
+    11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    34.588,
+    -11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_012",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_013",
+   "building": "Bld_16_shop",
+   "face": "left",
+   "shop_type": "cafe",
+   "text_fa": "کافه",
+   "text_translit": "Cafe",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 5.98,
+   "sign_height": 0.85,
+   "position_gltf": [
+    28.088,
+    3.395,
+    11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    28.088,
+    -11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_013",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_014",
+   "building": "Bld_17_shop",
+   "face": "front",
+   "shop_type": "nuts",
+   "text_fa": "آجیل و خشکبار",
+   "text_translit": "Ajil va Khoshkbar",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 8.1,
+   "sign_height": 0.85,
+   "position_gltf": [
+    24.78,
+    3.395,
+    0.75
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    -0.75,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_014",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_015",
+   "building": "Bld_19_shop",
+   "face": "front",
+   "shop_type": "kebab",
+   "text_fa": "کبابی",
+   "text_translit": "Kababi",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 5.05,
+   "sign_height": 0.85,
+   "position_gltf": [
+    40.624,
+    3.395,
+    -11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    40.624,
+    11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_015",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_016",
+   "building": "Bld_22_shop",
+   "face": "front",
+   "shop_type": "stationery",
+   "text_fa": "لوازم‌التحریر",
+   "text_translit": "Lavazem Tahrir",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 4.9,
+   "sign_height": 0.85,
+   "position_gltf": [
+    47.45,
+    3.395,
+    11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    47.45,
+    -11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_016",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_017",
+   "building": "Bld_23_shop",
+   "face": "front",
+   "shop_type": "appliances",
+   "text_fa": "لوازم خانگی",
+   "text_translit": "Lavazem Khanegi",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 8.41,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -24.78,
+    3.395,
+    6.697
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    -6.697,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_017",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_018",
+   "building": "Bld_23_shop",
+   "face": "right",
+   "shop_type": "florist",
+   "text_fa": "گل‌فروشی",
+   "text_translit": "Gol Foroshi",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 5.69,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -27.946,
+    3.395,
+    11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    -27.946,
+    -11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_018",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_019",
+   "building": "Bld_23_shop",
+   "face": "right",
+   "shop_type": "dairy",
+   "text_fa": "لبنیات",
+   "text_translit": "Labaniyat",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 6.91,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -34.446,
+    3.395,
+    11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    -34.446,
+    -11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_019",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_020",
+   "building": "Bld_26_shop",
+   "face": "front",
+   "shop_type": "mobile",
+   "text_fa": "موبایل",
+   "text_translit": "Mobile",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 5.54,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -47.13,
+    3.395,
+    -11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -47.13,
+    11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_020",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_021",
+   "building": "Bld_27_shop",
+   "face": "front",
+   "shop_type": "pharmacy",
+   "text_fa": "داروخانه شبانه‌روزی",
+   "text_translit": "Darukhane Shabaneruzi",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 6.06,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -41.13,
+    3.395,
+    -11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -41.13,
+    11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_021",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_022",
+   "building": "Bld_28_shop",
+   "face": "front",
+   "shop_type": "salon",
+   "text_fa": "آرایشگاه",
+   "text_translit": "Arayeshgah",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 6.69,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -46.556,
+    3.395,
+    11.22
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    -46.556,
+    -11.22,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_022",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_023",
+   "building": "Bld_30_shop",
+   "face": "front",
+   "shop_type": "exchange",
+   "text_fa": "صرافی",
+   "text_translit": "Sarrafi",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 4.71,
+   "sign_height": 0.85,
+   "position_gltf": [
+    32.225,
+    3.395,
+    -22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    32.225,
+    22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_023",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_024",
+   "building": "Bld_30_shop",
+   "face": "front",
+   "shop_type": "sandwich",
+   "text_fa": "ساندویچی",
+   "text_translit": "Sandwichi",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 4.57,
+   "sign_height": 0.85,
+   "position_gltf": [
+    27.386,
+    3.395,
+    -22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    27.386,
+    22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_024",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_025",
+   "building": "Bld_30_shop",
+   "face": "right",
+   "shop_type": "bakery",
+   "text_fa": "نانوایی سنگکی",
+   "text_translit": "Nanvaei Sangak",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 6.82,
+   "sign_height": 0.85,
+   "position_gltf": [
+    24.78,
+    3.395,
+    -26.512
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    26.512,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_025",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_026",
+   "building": "Bld_30_shop",
+   "face": "right",
+   "shop_type": "grocery",
+   "text_fa": "سوپرمارکت",
+   "text_translit": "Supermarket",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 5.78,
+   "sign_height": 0.85,
+   "position_gltf": [
+    24.78,
+    3.395,
+    -33.012
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    33.012,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_026",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_027",
+   "building": "Bld_31_shop",
+   "face": "front",
+   "shop_type": "pastry",
+   "text_fa": "قنادی",
+   "text_translit": "Ghannadi",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 7.1,
+   "sign_height": 0.85,
+   "position_gltf": [
+    38.327,
+    3.395,
+    -22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    38.327,
+    22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_027",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_028",
+   "building": "Bld_33_mall",
+   "face": "front",
+   "shop_type": "mall",
+   "text_fa": "پاساژ نگین",
+   "text_translit": "Pasazh Negin",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 13.8,
+   "sign_height": 1.3,
+   "position_gltf": [
+    24.78,
+    3.77,
+    -43.0
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    43.0,
+    3.77
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_028",
+   "suggested_font_size_m": 0.72
+  },
+  {
+   "id": "sign_029",
+   "building": "Bld_34_shop",
+   "face": "front",
+   "shop_type": "clothes",
+   "text_fa": "پوشاک مردانه",
+   "text_translit": "Pushak Mardane",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 4.3,
+   "sign_height": 0.85,
+   "position_gltf": [
+    27.251,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    27.251,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_029",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_030",
+   "building": "Bld_34_shop",
+   "face": "front",
+   "shop_type": "books",
+   "text_fa": "کتابفروشی",
+   "text_translit": "Ketab Foroshi",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 5.09,
+   "sign_height": 0.85,
+   "position_gltf": [
+    32.145,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    32.145,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_030",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_031",
+   "building": "Bld_34_shop",
+   "face": "left",
+   "shop_type": "greengrocer",
+   "text_fa": "میوه و سبزی تازه",
+   "text_translit": "Mive va Sabzi Taze",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 5.07,
+   "sign_height": 0.85,
+   "position_gltf": [
+    24.78,
+    3.395,
+    33.365
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    -33.365,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_031",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_032",
+   "building": "Bld_34_shop",
+   "face": "left",
+   "shop_type": "optics",
+   "text_fa": "عینک‌سازی",
+   "text_translit": "Eynak Sazi",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 7.53,
+   "sign_height": 0.85,
+   "position_gltf": [
+    24.78,
+    3.395,
+    26.865
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    -26.865,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_032",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_033",
+   "building": "Bld_36_shop",
+   "face": "front",
+   "shop_type": "print",
+   "text_fa": "چاپ و تکثیر",
+   "text_translit": "Chap va Taksir",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 6.08,
+   "sign_height": 0.85,
+   "position_gltf": [
+    46.861,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    46.861,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_033",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_034",
+   "building": "Bld_37_mall",
+   "face": "front",
+   "shop_type": "mall",
+   "text_fa": "مجتمع تجاری ستاره",
+   "text_translit": "Mojtama Tejari Setareh",
+   "normal_blender": [
+    -1,
+    0,
+    0
+   ],
+   "sign_width": 13.8,
+   "sign_height": 1.3,
+   "position_gltf": [
+    24.78,
+    3.77,
+    43.0
+   ],
+   "normal_gltf": [
+    -1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": -90.0,
+   "position_blender": [
+    24.78,
+    -43.0,
+    3.77
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_034",
+   "suggested_font_size_m": 0.72
+  },
+  {
+   "id": "sign_035",
+   "building": "Bld_40_shop",
+   "face": "front",
+   "shop_type": "cafe",
+   "text_fa": "کافه",
+   "text_translit": "Cafe",
+   "normal_blender": [
+    0,
+    -1,
+    0
+   ],
+   "sign_width": 6.74,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -28.471,
+    3.395,
+    -22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    1
+   ],
+   "yaw_y_degrees": 0.0,
+   "position_blender": [
+    -28.471,
+    22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_035",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_036",
+   "building": "Bld_40_shop",
+   "face": "left",
+   "shop_type": "nuts",
+   "text_fa": "آجیل و خشکبار",
+   "text_translit": "Ajil va Khoshkbar",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 6.2,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -24.78,
+    3.395,
+    -32.799
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    32.799,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_036",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_037",
+   "building": "Bld_40_shop",
+   "face": "left",
+   "shop_type": "kebab",
+   "text_fa": "کبابی",
+   "text_translit": "Kababi",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 6.4,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -24.78,
+    3.395,
+    -26.299
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    26.299,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_037",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_038",
+   "building": "Bld_41_mall",
+   "face": "front",
+   "shop_type": "mall",
+   "text_fa": "پاساژ آفتاب",
+   "text_translit": "Pasazh Aftab",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 13.8,
+   "sign_height": 1.3,
+   "position_gltf": [
+    -24.78,
+    3.77,
+    -43.0
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    43.0,
+    3.77
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_038",
+   "suggested_font_size_m": 0.72
+  },
+  {
+   "id": "sign_039",
+   "building": "Bld_42_shop",
+   "face": "front",
+   "shop_type": "stationery",
+   "text_fa": "لوازم‌التحریر",
+   "text_translit": "Lavazem Tahrir",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 6.22,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -46.788,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -46.788,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_039",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_040",
+   "building": "Bld_43_shop",
+   "face": "front",
+   "shop_type": "appliances",
+   "text_fa": "لوازم خانگی",
+   "text_translit": "Lavazem Khanegi",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 5.38,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -40.788,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -40.788,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_040",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_041",
+   "building": "Bld_43_shop",
+   "face": "front",
+   "shop_type": "florist",
+   "text_fa": "گل‌فروشی",
+   "text_translit": "Gol Foroshi",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 4.37,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -35.712,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -35.712,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_041",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_042",
+   "building": "Bld_44_shop",
+   "face": "front",
+   "shop_type": "dairy",
+   "text_fa": "لبنیات",
+   "text_translit": "Labaniyat",
+   "normal_blender": [
+    0,
+    1,
+    0
+   ],
+   "sign_width": 8.23,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -29.213,
+    3.395,
+    22.78
+   ],
+   "normal_gltf": [
+    0,
+    0,
+    -1
+   ],
+   "yaw_y_degrees": 180.0,
+   "position_blender": [
+    -29.213,
+    -22.78,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_042",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_043",
+   "building": "Bld_44_shop",
+   "face": "right",
+   "shop_type": "mobile",
+   "text_fa": "موبایل",
+   "text_translit": "Mobile",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 6.3,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -24.78,
+    3.395,
+    26.248
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    -26.248,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_043",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_044",
+   "building": "Bld_44_shop",
+   "face": "right",
+   "shop_type": "pharmacy",
+   "text_fa": "داروخانه شبانه‌روزی",
+   "text_translit": "Darukhane Shabaneruzi",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 6.3,
+   "sign_height": 0.85,
+   "position_gltf": [
+    -24.78,
+    3.395,
+    32.748
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    -32.748,
+    3.395
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_044",
+   "suggested_font_size_m": 0.47
+  },
+  {
+   "id": "sign_045",
+   "building": "Bld_45_mall",
+   "face": "front",
+   "shop_type": "mall",
+   "text_fa": "مرکز خرید نسیم",
+   "text_translit": "Markaz Kharid Nasim",
+   "normal_blender": [
+    1,
+    0,
+    0
+   ],
+   "sign_width": 13.8,
+   "sign_height": 1.3,
+   "position_gltf": [
+    -24.78,
+    3.77,
+    43.0
+   ],
+   "normal_gltf": [
+    1,
+    0,
+    0
+   ],
+   "yaw_y_degrees": 90.0,
+   "position_blender": [
+    -24.78,
+    -43.0,
+    3.77
+   ],
+   "direction": "rtl",
+   "language": "fa",
+   "anchor_object": "TextAnchor_sign_045",
+   "suggested_font_size_m": 0.72
+  }
+ ]
+}
