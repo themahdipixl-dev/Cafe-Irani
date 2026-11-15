@@ -5,6 +5,7 @@ extends Node3D
 ## Car models are the glb files in assets/Cars/ (length = 1 unit along +X, front = +X,
 ## body + 4 separate wheel nodes). Each car is scaled to `car_length` meters, snapped to the
 ## road using its wheel bottoms, and its wheels spin based on the distance driven.
+## Every model in CAR_PATHS is used (random order each run, no repeats until all are used).
 ## Everything tunable is an exported var (edit in the inspector, no code change needed).
 
 const CAR_PATHS: Array[String] = [
@@ -23,18 +24,21 @@ const LOOK_AHEAD := 1.5
 @export var car_length := 2.4
 ## Height of the asphalt surface.
 @export var road_y := -0.05
-@export var random_seed := 7
+## 0 = a new random car order every run. Any other number = the same order every run.
+@export var random_seed := 0
 
 @export_group("Outer loop (counter-clockwise, right-hand lane)")
 ## Half size (x, z) of the loop rectangle = lane centerlines.
 @export var outer_half_size := Vector2(20.5, 18.5)
 @export var outer_cars := 3
-@export var outer_speed := 7.0
+## Meters per second (slowed down for inspecting the cars).
+@export var outer_speed := 3.0
 
 @export_group("Inner loop (clockwise)")
 @export var inner_half_size := Vector2(17.5, 15.5)
 @export var inner_cars := 2
-@export var inner_speed := 5.0
+## Meters per second (slowed down for inspecting the cars).
+@export var inner_speed := 2.0
 
 @export_group("Shape")
 @export var corner_radius := 3.0
@@ -104,7 +108,10 @@ class Runner:
 
 func _ready() -> void:
 	var rng := RandomNumberGenerator.new()
-	rng.seed = random_seed
+	if random_seed == 0:
+		rng.randomize()
+	else:
+		rng.seed = random_seed
 	var models := CAR_PATHS.duplicate()
 	_shuffle(models, rng)
 	var next_model := 0
