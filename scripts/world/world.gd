@@ -3,8 +3,9 @@ extends Node3D
 ## Root of the 3D world: the city + cafe glb, an orthographic isometric camera, light and traffic.
 ##
 ## The glb files themselves are never modified at runtime. Things we don't want from them
-## (their built-in cars) are removed here when the scene starts, and repeated meshes
+## (their built-in cars) are removed here when the scene starts, and repeated city meshes
 ## (trees, lamp posts, props...) are drawn with MultiMesh to cut draw calls.
+## The cafe is never batched: its objects must stay separate so each can be shown/hidden by upgrades.
 
 ## Nodes inside the city glb that are removed at start (the glb's own cars;
 ## the real cars come from assets/Cars/ via Traffic).
@@ -14,10 +15,10 @@ extends Node3D
 ]
 
 @export_group("Batching")
-## Draw repeated meshes with one MultiMesh per group (see InstanceBatcher).
+## Draw repeated city meshes with one MultiMesh per group (see InstanceBatcher).
 @export var batch_repeated_meshes := true
-## Name prefixes that are never batched.
-@export var batch_exclude_prefixes: PackedStringArray = ["Car_", "ParkedCar_"]
+## Name prefixes that are never batched. "Cafe" keeps the whole cafe (node `Cafe`) untouched.
+@export var batch_exclude_prefixes: PackedStringArray = ["Car_", "ParkedCar_", "Cafe"]
 ## Smallest group of identical meshes that is batched.
 @export var batch_min_instances := 2
 ## Grid cell size (m) used to split a group so culling still works. 0 = one MultiMesh per group.
