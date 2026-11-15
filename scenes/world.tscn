@@ -9,8 +9,7 @@ background_mode = 1
 background_color = Color(0.725, 0.851, 0.561, 1)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.35
-tonemap_mode = 2
+ambient_light_energy = 0.2
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_world")
@@ -20,7 +19,7 @@ environment = SubResource("Environment_world")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 rotation_degrees = Vector3(-50, 25, 0)
-light_energy = 0.7
+light_energy = 0.45
 shadow_enabled = true
 directional_shadow_mode = 0
 directional_shadow_max_distance = 110.0
