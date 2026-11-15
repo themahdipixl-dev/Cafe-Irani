@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/world.gd" id="1_world"]
-[ext_resource type="PackedScene" path="res://assets/cafe/tehran_with_cafe_v15_asphalt.glb" id="2_city"]
+[ext_resource type="PackedScene" path="res://assets/cafe/city_only.glb" id="2_city"]
 [ext_resource type="Script" path="res://scripts/world/traffic.gd" id="3_traffic"]
 [ext_resource type="Script" path="res://scripts/world/camera_zoom.gd" id="4_camera"]
+[ext_resource type="PackedScene" path="res://assets/cafe/cafe_only.glb" id="5_cafe"]
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 1
@@ -26,6 +27,8 @@ directional_shadow_mode = 0
 directional_shadow_max_distance = 110.0
 
 [node name="City" parent="." instance=ExtResource("2_city")]
+
+[node name="Cafe" parent="City" instance=ExtResource("5_cafe")]
 
 [node name="Traffic" type="Node3D" parent="."]
 script = ExtResource("3_traffic")
