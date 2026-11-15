@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/world.gd" id="1_world"]
 [ext_resource type="PackedScene" path="res://assets/cafe/tehran_with_cafe_v15_asphalt.glb" id="2_city"]
 [ext_resource type="Script" path="res://scripts/world/traffic.gd" id="3_traffic"]
+[ext_resource type="Script" path="res://scripts/world/camera_zoom.gd" id="4_camera"]
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 1
@@ -18,7 +19,7 @@ script = ExtResource("1_world")
 environment = SubResource("Environment_world")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-rotation_degrees = Vector3(-50, 25, 0)
+rotation_degrees = Vector3(-50, 114.5, 0)
 light_energy = 0.45
 shadow_enabled = true
 directional_shadow_mode = 0
@@ -31,6 +32,7 @@ script = ExtResource("3_traffic")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(0.707107, -0.408248, 0.57735, 0, 0.816497, 0.57735, -0.707107, -0.408248, 0.57735, 57.74, 58.74, 57.74)
+script = ExtResource("4_camera")
 keep_aspect = 0
 projection = 1
 size = 36.0
