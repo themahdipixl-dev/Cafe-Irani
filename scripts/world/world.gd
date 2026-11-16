@@ -14,6 +14,14 @@ extends Node3D
 	"ParkedCar_1", "ParkedCar_2",
 ]
 
+## Nodes inside the cafe glb (cafe_only_opt5.glb) that are removed at start: the two parked cars
+## in the parking lot (red in bay S02, blue in bay S03), each made of body + glass + wheels.
+## Parked cars are spawned from assets/Cars/ by Traffic instead.
+@export var remove_cafe_nodes: PackedStringArray = [
+	"ParkingS02CarRed", "ParkingS02CarGlass", "ParkingS02Wheel",
+	"ParkingS03CarBlue", "ParkingS03CarGlass", "ParkingS03Wheel",
+]
+
 @export_group("Batching")
 ## Draw repeated city meshes with one MultiMesh per group (see InstanceBatcher).
 @export var batch_repeated_meshes := true
@@ -25,16 +33,23 @@ extends Node3D
 @export var batch_chunk_size := 40.0
 
 @onready var _city: Node3D = $City
+@onready var _cafe: Node3D = $City/Cafe
 
 
 func _ready() -> void:
-	for node_name in remove_nodes:
-		var node := _city.find_child(node_name, true, false)
-		if node == null:
-			push_warning("CafeWorld: '%s' not found in the city glb" % node_name)
-			continue
-		node.queue_free()
+	_remove_named(_city, remove_nodes, "city")
+	_remove_named(_cafe, remove_cafe_nodes, "cafe")
 	if batch_repeated_meshes:
 		var stats := InstanceBatcher.batch(_city, batch_exclude_prefixes,
 				batch_min_instances, batch_chunk_size)
 		print("CafeWorld: batched %d nodes into %d MultiMeshes" % [stats.removed, stats.batches])
+
+
+## Frees every node in [param names] found below [param root]; warns about missing ones.
+func _remove_named(root: Node, names: PackedStringArray, glb_label: String) -> void:
+	for node_name in names:
+		var node := root.find_child(node_name, true, false)
+		if node == null:
+			push_warning("CafeWorld: '%s' not found in the %s glb" % [node_name, glb_label])
+			continue
+		node.queue_free()
