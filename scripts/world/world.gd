@@ -36,6 +36,9 @@ extends Node3D
 ## Grid cell size (m) used to split a group so culling still works. 0 = one MultiMesh per group.
 @export var batch_chunk_size := 40.0
 
+## TEMP (draw call test, remove afterwards): hides the cafe and all cars so only the city is drawn.
+@export var temp_hide_cafe_and_cars := true
+
 @onready var _city: Node3D = $City
 @onready var _cafe: Node3D = $City/Cafe
 
@@ -47,6 +50,21 @@ func _ready() -> void:
 		var stats := InstanceBatcher.batch(_city, batch_exclude_prefixes,
 				batch_min_instances, batch_chunk_size)
 		print("CafeWorld: batched %d nodes into %d MultiMeshes" % [stats.removed, stats.batches])
+	if temp_hide_cafe_and_cars: # TEMP
+		_temp_hide_cafe_and_cars()
+
+
+## TEMP (draw call test, remove afterwards): hides the cafe and the Traffic node (all cars).
+func _temp_hide_cafe_and_cars() -> void:
+	_cafe.visible = false
+	var traffic := get_node_or_null("Traffic")
+	if traffic == null:
+		traffic = find_child("Traffic", true, false)
+	if traffic is Node3D:
+		traffic.visible = false
+	else:
+		push_warning("CafeWorld TEMP: Traffic node not found, cars are still visible")
+	print("CafeWorld TEMP: cafe and cars hidden (draw call test)")
 
 
 ## Frees every node in [param names] found below [param root]; warns about missing ones.
