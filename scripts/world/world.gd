@@ -17,9 +17,13 @@ extends Node3D
 ## Nodes inside the cafe glb (cafe_only_opt5.glb) that are removed at start: the two parked cars
 ## in the parking lot (red in bay S02, blue in bay S03), each made of body + glass + wheels.
 ## Parked cars are spawned from assets/Cars/ by Traffic instead.
+## "EntranceS04Mat_ff083ad7" is the solid green ellipsoid mesh of the two entrance cypresses
+## (x = -1.8 and +1.8, z = 5.5). It hides the leaf-card trees (EntranceS04CF_PlantAtlas) under it.
+## The node holds only those two ellipsoids (no children, mesh not shared), so nothing else goes.
 @export var remove_cafe_nodes: PackedStringArray = [
 	"ParkingS02CarRed", "ParkingS02CarGlass", "ParkingS02Wheel",
 	"ParkingS03CarBlue", "ParkingS03CarGlass", "ParkingS03Wheel",
+	"EntranceS04Mat_ff083ad7",
 ]
 
 @export_group("Batching")
