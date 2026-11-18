@@ -44,14 +44,9 @@ extends Node3D
 @export_group("Debug")
 ## Print the frame's draw calls and objects once per second. Turn off for release builds.
 @export var log_draw_calls := true
-## TEMPORARY draw-call test: hide the whole cafe. Set to false to show it again.
-@export var hide_cafe := true
-## TEMPORARY draw-call test: hide all cars (Traffic). Set to false to show them again.
-@export var hide_traffic := true
 
 @onready var _city: Node3D = $City
 @onready var _cafe: Node3D = $City/Cafe
-@onready var _traffic: Node3D = $Traffic
 @onready var _labels: CityLabels = $CityLabels
 
 var _log_timer := 0.0
@@ -66,10 +61,6 @@ func _ready() -> void:
 		var stats := InstanceBatcher.batch(_city, batch_exclude_prefixes,
 				batch_min_instances, batch_chunk_size)
 		print("CafeWorld: batched %d nodes into %d MultiMeshes" % [stats.removed, stats.batches])
-	_cafe.visible = not hide_cafe
-	_traffic.visible = not hide_traffic
-	if hide_cafe or hide_traffic:
-		print("CafeWorld: DEBUG hidden -> cafe: %s, traffic: %s" % [hide_cafe, hide_traffic])
 	set_process(log_draw_calls)
 
 
