@@ -10,10 +10,9 @@ extends Camera3D
 ## so dragging on a UI panel doesn't move the world.
 
 ## Closest zoom (smallest orthographic size, in meters). Must stay above 0.
-## Practically unlimited for now (testing).
-@export var min_size: float = 0.5
-## Farthest zoom (biggest orthographic size, in meters). Practically unlimited for now.
-@export var max_size: float = 1000.0
+@export var min_size: float = 8.0
+## Farthest zoom (biggest orthographic size, in meters). The city is 100 m wide.
+@export var max_size: float = 60.0
 ## Mouse wheel: size change per notch (0.1 = 10 %).
 @export var wheel_step: float = 0.1
 ## Pinch strength: 1.0 = size follows the finger distance exactly.
@@ -22,6 +21,10 @@ extends Camera3D
 @export var smoothing: float = 12.0
 ## Pan strength: 1.0 = the world follows the finger exactly.
 @export var pan_speed: float = 1.0
+## The point on the ground the camera looks at may not leave this box (meters).
+## Centre of the box (the cafe is at the origin) and half-extent on x / z.
+@export var pan_center: Vector2 = Vector2.ZERO
+@export var pan_half_extent: Vector2 = Vector2(30.0, 30.0)
 
 var _target_size: float = 36.0
 var _touches: Dictionary = {}  # finger index -> Vector2 position
@@ -99,3 +102,15 @@ func _pan_by(pixels: Vector2) -> void:
 	var sin_elevation := maxf(-forward.y, 0.1)
 	var move := -pixels.x * right + (pixels.y / sin_elevation) * ahead
 	global_position += move * units_per_pixel * pan_speed
+	_clamp_pan()
+
+
+## Keeps the ground point under the screen centre inside the pan box.
+func _clamp_pan() -> void:
+	var forward := -global_transform.basis.z
+	if forward.y > -0.01:
+		return  # looking at the horizon: no ground point
+	var focus := global_position + forward * (-global_position.y / forward.y)
+	var clamped_x := clampf(focus.x, pan_center.x - pan_half_extent.x, pan_center.x + pan_half_extent.x)
+	var clamped_z := clampf(focus.z, pan_center.y - pan_half_extent.y, pan_center.y + pan_half_extent.y)
+	global_position += Vector3(clamped_x - focus.x, 0.0, clamped_z - focus.z)

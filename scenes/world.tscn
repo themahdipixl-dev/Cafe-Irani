@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" path="res://assets/cafe/city_chunks_2x2.glb" id="2_city"]
 [ext_resource type="Script" path="res://scripts/world/traffic.gd" id="3_traffic"]
 [ext_resource type="Script" path="res://scripts/world/camera_zoom.gd" id="4_camera"]
-[ext_resource type="PackedScene" path="res://assets/cafe/cafe_only_opt5.glb" id="5_cafe"]
+[ext_resource type="PackedScene" path="res://assets/cafe/cafe_final.glb" id="5_cafe"]
 [ext_resource type="Script" path="res://scripts/world/city_labels.gd" id="6_labels"]
 
 [sub_resource type="Environment" id="Environment_world"]
