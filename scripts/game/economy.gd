@@ -3,15 +3,10 @@ extends RefCounted
 ## Pure economy functions. No nodes, no storage.
 ## Port of src/game/economy.js
 
-## Level every section starts at (new games), and the lowest level a loaded save can have.
-## Set to 1 to go back to the normal start.
-const START_LEVEL := 5
-
-
 static func default_levels() -> Dictionary:
 	var levels := {}
 	for k in Balance.SECTION_KEYS:
-		levels[k] = START_LEVEL
+		levels[k] = 1
 	return levels
 
 

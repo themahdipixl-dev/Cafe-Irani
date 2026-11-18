@@ -156,15 +156,13 @@ func _lvl(v: Variant) -> int:
 
 
 ## v2 saves have `levels`; v1 saves had a single `level` -> every section starts at that level.
-## No section can be below `Economy.START_LEVEL`.
 func _sanitize_levels(saved: Dictionary) -> Dictionary:
 	var src: Variant = saved.get("levels")
 	var has_levels := src is Dictionary
 	var legacy := _lvl(saved.get("level"))
 	var out := {}
 	for k in Balance.SECTION_KEYS:
-		var lv: int = _lvl(src.get(k)) if has_levels else legacy
-		out[k] = maxi(Economy.START_LEVEL, lv)
+		out[k] = _lvl(src.get(k)) if has_levels else legacy
 	return out
 
 
