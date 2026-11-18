@@ -6,6 +6,10 @@ extends Control
 ##
 ## Layers (bottom -> top):  TopGradient  ->  Hud  ->  UpgradePanel / ComingSoon  ->  BottomBar  ->  OfflineCard
 
+## TEMPORARY draw-call test: hide every UI layer so only the 3D world is drawn.
+## Set to false to show the UI again.
+@export var debug_hide_ui := true
+
 var _top_gradient: TopGradient
 var _hud: Hud
 var _upgrade_panel: UpgradePanel
@@ -57,6 +61,16 @@ func _ready() -> void:
 	_refresh()
 	_on_offline_changed()
 	call_deferred("_layout")
+	if debug_hide_ui:
+		call_deferred("_debug_hide_ui")
+
+
+## TEMPORARY: hides every UI layer (everything that is a CanvasItem; the 3D World is not one).
+func _debug_hide_ui() -> void:
+	for child in get_children():
+		if child is CanvasItem:
+			(child as CanvasItem).visible = false
+	print("Main: DEBUG UI hidden")
 
 
 ## Sizes / safe area. Runs at start and whenever the screen size changes.
