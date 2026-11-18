@@ -9,9 +9,9 @@ extends Node3D
 ## Everything tunable is an exported var (edit in the inspector, no code change needed).
 
 const CAR_PATHS: Array[String] = [
-	"res://assets/Cars/car_pego3.glb",
+	"res://assets/Cars/pars.glb",
 	"res://assets/Cars/dena.glb",
-	"res://assets/Cars/nissanabi2.glb",
+	"res://assets/Cars/nissanabi.glb",
 	"res://assets/Cars/pride.glb",
 	"res://assets/Cars/shahin.glb",
 	"res://assets/Cars/tara.glb",
@@ -22,6 +22,10 @@ const LOOK_AHEAD := 1.5
 ## round (x ~ y), flat (z smaller) and has a diameter between these two sizes.
 const WHEEL_MIN_DIAMETER := 0.1
 const WHEEL_MAX_DIAMETER := 0.35
+## Name parts that mark a wheel node (compared after lowercasing and removing `_`, `-`, `.`, spaces).
+const WHEEL_KEYWORDS: Array[String] = ["wheel", "tire", "tyre"]
+## Name parts that look like a wheel but are not one (wheel arch, wheel well, ...).
+const WHEEL_EXCLUDED: Array[String] = ["arch", "well", "house", "cover", "guard", "fender"]
 
 @export_group("Cars")
 ## Final car length in meters (the glb models are 1 unit long).
@@ -217,18 +221,56 @@ func _make_car(path: String) -> Runner:
 	return runner
 
 
-## Finds the wheel meshes of a car model. First by name (any case, ignoring `_` and spaces,
-## so `Left_Back_Wheel`, `LeftBackWheel` and `wheel.001` all count), then by shape
-## (round, flat, small) for models whose wheel nodes have other names.
+## Lowercases a node name and removes `_`, `-`, `.` and spaces, so `Wheel_FL`, `wheel-fl`,
+## `Left_Back_Wheel` and `wheel.001` are all compared in the same plain form.
+func _name_key(node_name: String) -> String:
+	return node_name.to_lower().replace("_", "").replace("-", "").replace(".", "").replace(" ", "")
+
+
+## True if a node name (as `_name_key`) marks a wheel / tire (and is not a wheel arch or similar).
+func _is_wheel_key(key: String) -> bool:
+	for bad in WHEEL_EXCLUDED:
+		if key.contains(bad):
+			return false
+	for word in WHEEL_KEYWORDS:
+		if key.contains(word):
+			return true
+	return false
+
+
+## True if the mesh itself, or one of its parents inside the model, is named like a wheel.
+func _is_wheel_mesh(mi: MeshInstance3D, model: Node) -> bool:
+	var node: Node = mi
+	while node != null and node != model:
+		if _is_wheel_key(_name_key(String(node.name))):
+			return true
+		node = node.get_parent()
+	return false
+
+
+## Finds the wheel meshes of a car model. First by name (see `_name_key`: works with `_` in the
+## names), then by shape (round, flat, small) for models whose wheel nodes have other names.
+## A wheel mesh sitting inside another wheel mesh is skipped (it moves with its parent).
 func _find_wheels(model: Node) -> Array[MeshInstance3D]:
 	var found: Array[MeshInstance3D] = []
 	var meshes := model.find_children("*", "MeshInstance3D", true, false)
 	for node in meshes:
-		var key := String(node.name).to_lower().replace("_", "").replace(" ", "")
-		if key.contains("wheel") or key.contains("tire") or key.contains("tyre"):
-			found.append(node as MeshInstance3D)
+		var mi := node as MeshInstance3D
+		if mi.mesh != null and _is_wheel_mesh(mi, model):
+			found.append(mi)
 	if not found.is_empty():
-		return found
+		var top: Array[MeshInstance3D] = []
+		for mi in found:
+			var nested := false
+			var p: Node = mi.get_parent()
+			while p != null and p != model:
+				if p in found:
+					nested = true
+					break
+				p = p.get_parent()
+			if not nested:
+				top.append(mi)
+		return top
 	for node in meshes:
 		var mi := node as MeshInstance3D
 		if mi.mesh == null:
