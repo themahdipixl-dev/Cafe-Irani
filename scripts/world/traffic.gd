@@ -18,6 +18,10 @@ const CAR_PATHS: Array[String] = [
 ]
 ## How far ahead (m) a car looks to decide its heading. Smooths the turns.
 const LOOK_AHEAD := 1.5
+## Shape fallback for finding wheels (model units, a car is 1 unit long): a wheel mesh is
+## round (x ~ y), flat (z smaller) and has a diameter between these two sizes.
+const WHEEL_MIN_DIAMETER := 0.1
+const WHEEL_MAX_DIAMETER := 0.35
 
 @export_group("Cars")
 ## Final car length in meters (the glb models are 1 unit long).
@@ -184,8 +188,7 @@ func _make_car(path: String) -> Runner:
 	runner.node = holder
 	var ground := INF
 	var radius_sum := 0.0
-	for found in model.find_children("*Wheel*", "MeshInstance3D", true, false):
-		var wheel := found as MeshInstance3D
+	for wheel in _find_wheels(model):
 		var box := wheel.get_aabb()
 		# Some models bake the wheel offset into the mesh, so pivot at the mesh center.
 		var center: Vector3 = wheel.transform * box.get_center()
@@ -203,12 +206,40 @@ func _make_car(path: String) -> Runner:
 		runner.wheels.append(pivot)
 
 	if runner.wheels.is_empty():
-		push_warning("Traffic: no wheels found in %s" % path)
+		var names: PackedStringArray = []
+		for mi in model.find_children("*", "MeshInstance3D", true, false):
+			names.append(String(mi.name))
+		push_warning("Traffic: no wheels found in %s (meshes: %s)" % [path, ", ".join(names)])
 		ground = -0.17
 	else:
 		runner.wheel_radius = radius_sum / float(runner.wheels.size()) * car_length
 	model.position.y = -ground
 	return runner
+
+
+## Finds the wheel meshes of a car model. First by name (any case, ignoring `_` and spaces,
+## so `Left_Back_Wheel`, `LeftBackWheel` and `wheel.001` all count), then by shape
+## (round, flat, small) for models whose wheel nodes have other names.
+func _find_wheels(model: Node) -> Array[MeshInstance3D]:
+	var found: Array[MeshInstance3D] = []
+	var meshes := model.find_children("*", "MeshInstance3D", true, false)
+	for node in meshes:
+		var key := String(node.name).to_lower().replace("_", "").replace(" ", "")
+		if key.contains("wheel") or key.contains("tire") or key.contains("tyre"):
+			found.append(node as MeshInstance3D)
+	if not found.is_empty():
+		return found
+	for node in meshes:
+		var mi := node as MeshInstance3D
+		if mi.mesh == null:
+			continue
+		var size := mi.get_aabb().size
+		var widest := maxf(size.x, size.y)
+		var is_round := absf(size.x - size.y) <= 0.2 * widest
+		var is_flat := size.z < 0.8 * widest
+		if is_round and is_flat and widest >= WHEEL_MIN_DIAMETER and widest <= WHEEL_MAX_DIAMETER:
+			found.append(mi)
+	return found
 
 
 func _shuffle(arr: Array, rng: RandomNumberGenerator) -> void:
