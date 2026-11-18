@@ -119,18 +119,27 @@ func _init_stages() -> void:
 		_set_stage(key, start_stage)
 	if _stages.is_empty():
 		push_warning("CafeWorld: no 'Sec_*' nodes in the cafe glb")
+	else:
+		print("CafeWorld: %d cafe sections at stage %d" % [_stages.size(), start_stage])
 
 
-## Stage nodes are named S01..S05 under `Sec_<section>`; stages above [param stage] are hidden.
+## The children of `Sec_<section>` are the stages S01..S05 in order. They are matched by order,
+## not by name: Godot makes glb node names unique, so only the first section keeps "S01".
+## Stages above [param stage] are hidden.
 func _set_stage(section: String, stage: int) -> void:
 	_stages[section] = stage
 	var sec := _cafe.find_child("Sec_" + section, true, false)
 	if sec == null:
 		return
-	for i in range(1, MAX_STAGE + 1):
-		var stage_node := sec.get_node_or_null("S%02d" % i) as Node3D
-		if stage_node != null:
-			stage_node.visible = i <= stage
+	var index := 0
+	for child in sec.get_children():
+		var stage_node := child as Node3D
+		if stage_node == null:
+			continue
+		index += 1
+		stage_node.visible = index <= stage
+	if index != MAX_STAGE:
+		push_warning("CafeWorld: section '%s' has %d stage nodes, expected %d" % [section, index, MAX_STAGE])
 
 
 ## Replaces the glb's Cafe_Flat / Cafe_Glass materials with the vertex-data shaders.
