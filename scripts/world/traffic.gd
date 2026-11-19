@@ -29,9 +29,12 @@ const WHEEL_EXCLUDED: Array[String] = ["arch", "well", "house", "cover", "guard"
 
 @export_group("Cars")
 ## Final car length in meters (the glb models are 1 unit long).
-@export var car_length := 2.4
+@export var car_length := 3.6
 ## Height of the asphalt surface.
 @export var road_y := -0.05
+## Extra height (m) added to every car so the wheels sit on the road instead of sinking into it.
+## Raise it if the wheels are still inside the ground, lower it if the cars float.
+@export var ground_lift := 0.1
 ## 0 = a new random car order every run. Any other number = the same order every run.
 @export var random_seed := 0
 
@@ -148,7 +151,7 @@ func _ready() -> void:
 		next_model += 1
 		if parked == null:
 			continue
-		parked.node.position = spot
+		parked.node.position = spot + Vector3(0.0, ground_lift, 0.0)
 		parked.node.rotation.y = deg_to_rad(parked_yaw_deg)
 
 
@@ -163,7 +166,7 @@ func _update(r: Runner, dist: float, turn_smooth: float) -> void:
 	var p := r.loop.sample(r.s)
 	var ahead := r.loop.sample(r.s + LOOK_AHEAD)
 	var d := ahead - p
-	r.node.position = Vector3(p.x, road_y, p.y)
+	r.node.position = Vector3(p.x, road_y + ground_lift, p.y)
 	if d.length_squared() > 0.0001:
 		# Model front is +X: rotating +X by yaw gives (cos, 0, -sin).
 		var target := atan2(-d.y, d.x)
