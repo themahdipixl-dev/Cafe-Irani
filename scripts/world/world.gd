@@ -2,19 +2,21 @@ class_name CafeWorld
 extends Node3D
 ## Root of the 3D world: the city chunks + cafe glb, an orthographic isometric camera, light and traffic.
 ##
-## The glb files themselves are never modified at runtime. The city is city_chunks_2x2.glb:
+## The glb files themselves are never modified at runtime. The city is city_fixed.glb:
 ## 4 merged chunks (`City_Chunk_NW/NE/SW/SE`), each with 2 surfaces (opaque + alpha scissor),
 ## so the whole city is at most 8 draw calls. Lamps are already baked into the chunks; the
 ## `Lamp_*` nodes are empty anchors. Shop-sign text is added by CityLabels on the `TextAnchor_*` nodes.
-## The cafe (cafe_final.glb) is never batched: its stages (`Sec_*/S01..S05`) are shown/hidden by
-## unlock(). Its materials are shaders reading vertex data (see CafeMaterials).
+## The cafe (cafe_v2.glb) is never batched: its stages (`Sec_*/S01..S05`) are shown/hidden by
+## unlock(). Its `Cafe_Flat` / `Cafe_Glass` materials are shaders reading vertex data (see
+## CafeMaterials); its textured materials (plants, asphalt, turf) are used as imported.
+## Cafe texts (menus, boards, signs) are added by CafeLabels on the text anchors of the cafe glb.
 
 ## Nodes inside the city glb that are removed at start. Empty: the chunk glb has no built-in cars
 ## (the real cars come from assets/Cars/ via Traffic).
 @export var remove_nodes: PackedStringArray = []
 
-## Nodes inside the cafe glb (cafe_final.glb) that are removed at start. Empty: the parked cars
-## and the entrance cypress ellipsoids are already gone from cafe_final.glb.
+## Nodes inside the cafe glb (cafe_v2.glb) that are removed at start. Empty: the parked cars
+## and the entrance cypress ellipsoids are already gone from the cafe glb.
 ## Parked cars are spawned from assets/Cars/ by Traffic.
 @export var remove_cafe_nodes: PackedStringArray = []
 
@@ -57,6 +59,7 @@ extends Node3D
 @onready var _city: Node3D = $City
 @onready var _cafe: Node3D = $City/Cafe
 @onready var _labels: CityLabels = $CityLabels
+@onready var _cafe_labels: CafeLabels = $CafeLabels
 
 const MAX_STAGE := 5
 
@@ -72,6 +75,7 @@ func _ready() -> void:
 	_init_stages()
 	_setup_chunks()
 	_labels.build(_city)
+	_cafe_labels.build(_cafe)
 	if batch_repeated_meshes:
 		var stats := InstanceBatcher.batch(_city, batch_exclude_prefixes,
 				batch_min_instances, batch_chunk_size)
@@ -148,7 +152,7 @@ func _setup_cafe_materials() -> void:
 			glass_shader, emission_energy)
 	print("CafeWorld: cafe shaders on %d flat + %d glass surfaces" % [stats.flat, stats.glass])
 	if stats.flat == 0:
-		push_warning("CafeWorld: no 'Cafe_Flat' surfaces found (is cafe_final.glb imported?)")
+		push_warning("CafeWorld: no 'Cafe_Flat' surfaces found (is cafe_v2.glb imported?)")
 
 
 ## Prepares the merged city chunks: no shadows, and logs how many chunks/surfaces were found.
