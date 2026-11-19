@@ -29,12 +29,11 @@ const WHEEL_EXCLUDED: Array[String] = ["arch", "well", "house", "cover", "guard"
 
 @export_group("Cars")
 ## Final car length in meters (the glb models are 1 unit long).
-@export var car_length := 3.6
+@export var car_length := 3.4
 ## Height of the asphalt surface.
 @export var road_y := -0.05
-## Extra height (m) added to every car so the wheels sit on the road instead of sinking into it.
-## Raise it if the wheels are still inside the ground, lower it if the cars float.
-@export var ground_lift := 0.1
+## Optional fine-tune (m): extra height added to every car. 0 = wheel bottoms touch the road.
+@export var ground_lift := 0.0
 ## 0 = a new random car order every run. Any other number = the same order every run.
 @export var random_seed := 0
 
@@ -200,7 +199,10 @@ func _make_car(path: String) -> Runner:
 		# Some models bake the wheel offset into the mesh, so pivot at the mesh center.
 		var center: Vector3 = wheel.transform * box.get_center()
 		var radius := (box.size.x + box.size.y) * 0.25
-		ground = minf(ground, center.y - radius)
+		# The wheel's offset can sit on a parent node (Godot's glb import), so measure the
+		# wheel center in model space for the ground height.
+		var center_in_model: Vector3 = _transform_in_model(wheel, model) * box.get_center()
+		ground = minf(ground, center_in_model.y - radius)
 		radius_sum += radius
 		var parent := wheel.get_parent()
 		var pivot := Node3D.new()
@@ -222,6 +224,19 @@ func _make_car(path: String) -> Runner:
 		runner.wheel_radius = radius_sum / float(runner.wheels.size()) * car_length
 	model.position.y = -ground
 	return runner
+
+
+## Transform of `node` relative to `model` (the product of the transforms from `node` up to,
+## but not including, `model`).
+func _transform_in_model(node: Node3D, model: Node) -> Transform3D:
+	var t := Transform3D.IDENTITY
+	var n: Node = node
+	while n != null and n != model:
+		var n3 := n as Node3D
+		if n3 != null:
+			t = n3.transform * t
+		n = n.get_parent()
+	return t
 
 
 ## Lowercases a node name and removes `_`, `-`, `.` and spaces, so `Wheel_FL`, `wheel-fl`,
