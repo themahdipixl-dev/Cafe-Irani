@@ -35,6 +35,12 @@ extends Node3D
 ## 5 shows the whole cafe. Base (walls, floor) is always visible.
 @export_range(0, 5) var start_stage := 1
 
+@export_group("City visibility")
+## Show the city chunks (city_fixed.glb) and their shop-sign labels. Off: the city is hidden and
+## the milky-white `Ground` plane of world.tscn is the only surface around the cafe.
+## The cafe stays visible either way (it is a child of the `City` node, so only the chunks are hidden).
+@export var show_city := false
+
 @export_group("City chunks")
 ## Name prefix of the merged city chunk meshes in the city glb.
 @export var chunk_prefix := "City_Chunk"
@@ -74,7 +80,10 @@ func _ready() -> void:
 	_setup_cafe_materials()
 	_init_stages()
 	_setup_chunks()
-	_labels.build(_city)
+	if show_city:
+		_labels.build(_city)
+	else:
+		_hide_city()
 	_cafe_labels.build(_cafe)
 	if batch_repeated_meshes:
 		var stats := InstanceBatcher.batch(_city, batch_exclude_prefixes,
@@ -170,6 +179,16 @@ func _setup_chunks() -> void:
 		push_warning("CafeWorld: no '%s*' meshes in the city glb" % chunk_prefix)
 		return
 	print("CafeWorld: %d city chunks, %d surfaces (max draw calls for the city)" % [chunks, surfaces])
+
+
+## Hides the merged city chunks (the cafe is not a chunk, so it stays). Shop-sign labels are not
+## built in this case. Turn [member show_city] on to bring the city back.
+func _hide_city() -> void:
+	var hidden := 0
+	for node in _city.find_children(chunk_prefix + "*", "MeshInstance3D", true, false):
+		(node as MeshInstance3D).visible = false
+		hidden += 1
+	print("CafeWorld: city hidden (%d chunks)" % hidden)
 
 
 ## Frees every node in [param names] found below [param root]; warns about missing ones.

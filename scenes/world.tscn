@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/world.gd" id="1_world"]
 [ext_resource type="PackedScene" path="res://assets/cafe/city_fixed.glb" id="2_city"]
@@ -15,6 +15,14 @@ ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.5
 
+[sub_resource type="StandardMaterial3D" id="Material_ground"]
+albedo_color = Color(0.96, 0.94, 0.9, 1)
+roughness = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+material = SubResource("Material_ground")
+size = Vector2(200, 200)
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_world")
 start_stage = 5
@@ -29,6 +37,11 @@ shadow_enabled = false
 directional_shadow_mode = 0
 directional_shadow_max_distance = 110.0
 
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_ground")
+
 [node name="City" parent="." instance=ExtResource("2_city")]
 
 [node name="Cafe" parent="City" instance=ExtResource("5_cafe")]
@@ -40,6 +53,8 @@ script = ExtResource("6_labels")
 script = ExtResource("7_cafe_labels")
 
 [node name="Traffic" type="Node3D" parent="."]
+visible = false
+process_mode = 4
 script = ExtResource("3_traffic")
 
 [node name="Camera" type="Camera3D" parent="."]
