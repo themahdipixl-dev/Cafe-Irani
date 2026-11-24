@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://scripts/world/world.gd" id="1_world"]
 [ext_resource type="Script" path="res://scripts/world/camera_zoom.gd" id="2_camera"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://assets/cafe/storage_cafe_v1.glb" id="5_storage"]
 [ext_resource type="PackedScene" path="res://assets/cafe/tehran_delivery_v3 (1).glb" id="6_delivery"]
 [ext_resource type="PackedScene" path="res://assets/cafe/tehran_cafe_terrace_v2.glb" id="7_terrace"]
+[ext_resource type="PackedScene" path="res://assets/cafe/tehran_cafe_marketing_v2.glb" id="8_marketing"]
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 1
@@ -41,8 +42,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66, 0, -8.69)
 [node name="Storage" parent="Cafe" instance=ExtResource("5_storage")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.66, 0, -2)
 
-[node name="Marketing" type="Node3D" parent="Cafe"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.66, 0, 4.53)
+[node name="Marketing" parent="Cafe" instance=ExtResource("8_marketing")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.49, 0, 3.83)
 
 [node name="Terrace" parent="Cafe" instance=ExtResource("7_terrace")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71, 0, 0.5)
