@@ -34,16 +34,16 @@ directional_shadow_mode = 0
 [node name="Hall" parent="Cafe" instance=ExtResource("3_hall")]
 
 [node name="Delivery" parent="Cafe" instance=ExtResource("6_delivery")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05, 0, -8.39)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05, 0, -8.36)
 
 [node name="Kitchen" parent="Cafe" instance=ExtResource("4_kitchen")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31, 0, -8.36)
 
 [node name="Storage" parent="Cafe" instance=ExtResource("5_storage")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.33, 0, -2)
 
 [node name="Marketing" parent="Cafe" instance=ExtResource("8_marketing")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.43, 0, 3.33)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.33, 0, 3.33)
 
 [node name="Terrace" parent="Cafe" instance=ExtResource("7_terrace")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41, 0, 1.11)
