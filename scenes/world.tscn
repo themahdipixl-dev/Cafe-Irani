@@ -14,7 +14,7 @@ background_mode = 1
 background_color = Color(0.929, 0.969, 0.988, 1)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.5
+ambient_light_energy = 0.35
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_world")
@@ -25,7 +25,7 @@ environment = SubResource("Environment_world")
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 rotation_degrees = Vector3(-50, 25, 0)
-light_energy = 1.0
+light_energy = 0.6
 shadow_enabled = false
 directional_shadow_mode = 0
 
@@ -34,19 +34,19 @@ directional_shadow_mode = 0
 [node name="Hall" parent="Cafe" instance=ExtResource("3_hall")]
 
 [node name="Delivery" parent="Cafe" instance=ExtResource("6_delivery")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8.69)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05, 0, -8.39)
 
 [node name="Kitchen" parent="Cafe" instance=ExtResource("4_kitchen")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66, 0, -8.69)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31, 0, -8.36)
 
 [node name="Storage" parent="Cafe" instance=ExtResource("5_storage")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.66, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36, 0, -2)
 
 [node name="Marketing" parent="Cafe" instance=ExtResource("8_marketing")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.49, 0, 3.83)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.43, 0, 3.33)
 
 [node name="Terrace" parent="Cafe" instance=ExtResource("7_terrace")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71, 0, 0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.41, 0, 1.11)
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(0.707107, -0.408248, 0.57735, 0, 0.816497, 0.57735, -0.707107, -0.408248, 0.57735, 59.61, 58.74, 56.61)
