@@ -1,7 +1,7 @@
 extends Control
 ## Main scene: UI layers on top of the (future) glb-based 3D world.
 ##
-## The world (cafe, city, cars) will be built from .glb models placed in .tscn scenes.
+## The world (the cafe sections) is built from .glb models placed in .tscn scenes.
 ## Until then this scene only shows the UI.
 ##
 ## Layers (bottom -> top):  TopGradient  ->  Hud  ->  UpgradePanel / ComingSoon  ->  BottomBar  ->  OfflineCard
