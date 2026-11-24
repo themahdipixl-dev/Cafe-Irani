@@ -11,7 +11,7 @@ extends Camera3D
 
 ## Closest zoom (smallest orthographic size, in meters). Must stay above 0.
 @export var min_size: float = 8.0
-## Farthest zoom (biggest orthographic size, in meters). The city is 100 m wide.
+## Farthest zoom (biggest orthographic size, in meters). The whole cafe is about 26 m wide.
 @export var max_size: float = 60.0
 ## Mouse wheel: size change per notch (0.1 = 10 %).
 @export var wheel_step: float = 0.1
