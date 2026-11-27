@@ -1,8 +1,8 @@
-# Margino (مرجینو) — Godot
+# Merjino (مرجینو) — Godot
 
-Mobile merge + restoration game. Theme: Achaemenid four-part garden (Cyrus/Darius era).
+Mobile merge + restoration game. Each chapter has its own theme and setting.
 Android-first, portrait. 2D true-isometric, art made with an AI image generator (not code).
-Chapter 1 = a walled 30x30 m garden. **Only the chapter 1 environment exists right now**; merge logic, steps, orders and UI are not built yet.
+Chapter 1 = a walled 30x30 m garden (Achaemenid four-part garden theme, Cyrus/Darius era). **Only the chapter 1 environment exists right now**; merge logic, steps, orders and UI are not built yet.
 
 ## Source of truth
 The game design spec (`achaemenid_garden_game_spec.md`, owned by the user, not in the repo) defines the grid, items, layout table, zones and merge chains. Keep the numbers below in sync with it.

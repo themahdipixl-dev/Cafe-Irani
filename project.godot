@@ -4,7 +4,7 @@ config_version=5
 
 [application]
 
-config/name="Margino"
+config/name="Merjino"
 config/name_localized={
 "fa": "مرجینو"
 }
