@@ -253,7 +253,7 @@ func _circle_poly(radius: float) -> PackedVector2Array:
 func _subtract(subjects: Array, clip: PackedVector2Array) -> Array:
 	var out: Array = []
 	for subject in subjects:
-		out.append_array(Geometry2D.clip_polygons_2d(subject, clip))
+		out.append_array(Geometry2D.clip_polygons(subject, clip))
 	return out
 
 
